@@ -10,17 +10,17 @@ content
 
 ## another h2 title
 Image:
-![alt-text](/src/lib/assets/DALL·E.png)
+![alt-text](/src/lib/assets/DALLE.png)
 
 Gallery:
 
 <Gallery>
 
-![alt-text](/src/lib/assets/DALL·E.png)
+![alt-text](/src/lib/assets/DALLE.png)
 
-![alt-text](/src/lib/assets/DALL·E.png)
+![alt-text](/src/lib/assets/DALLE.png)
 
-![alt-text](/src/lib/assets/DALL·E.png)
+![alt-text](/src/lib/assets/DALLE.png)
 
-![alt-text](/src/lib/assets/DALL·E.png)
+![alt-text](/src/lib/assets/DALLE.png)
 </Gallery>
