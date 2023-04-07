@@ -10,7 +10,7 @@ content
 ## another h2 title
 Image:
 
-![alt-text]($lib/assets/DALLE.png)
+![alt-text]($lib/assets/DALLE.png?webp)
 
 Gallery:
 
