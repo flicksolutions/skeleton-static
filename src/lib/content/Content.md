@@ -52,7 +52,7 @@ Preise:	CHF 80.- / 60 Minuten
 
 
 ## Wer wir sind
-Bild von mir				Rosmarie Locher _20200404_155109.JPG
+![Rosmarie Locher](../assets/_20200404_155109.jpg) Rosmarie Locher
 Seit mehr als 30 Jahren arbeite ich mit Menschen zusammen. Zuerst in meinem angestammten Beruf als Pflegefachfrau und nun schon seit vielen Jahren in meiner Praxis als Med. Masseurin.
 Immer wieder stiess ich auf Grenzen und dachte: da möchte ich mehr tun, diesem Menschen möchte ich gerne noch andere Möglichkeiten zur Selbsthilfe anbieten.
 Und immer hatte ich dabei Pferde im Kopf.
@@ -60,17 +60,17 @@ Mit der Ausbildung zum INTEGRALHORSE® Familiencoach konnte ich diesen Wunsch nu
 
 
 
-Bild von Duana			Duana 20201111_111555.jpg
+![Duana](../assets/20201111_111555.jpg) Duana 20201111_111555.jpg
 Ich bin 12 Jahre alt und lebe schon einige Jahre hier in Bleienbach.
 Ich bin der Big-Boss in unserer kleinen Herde und zeige immer ganz deutlich, wenn mir etwas nicht passt. Sonst bin ich eher zurückhaltend – eine Dame eben – achte auf gutes Benehmen und lasse mich auch gerne mal bitten.
 
 
-Bild von Latifa			Latifa 20221013_103340.jpg
+![Latifa](../assets/20221013_103340.jpg) Latifa 20221013_103340.jpg
 Ich verbrachte die ersten acht Jahre meines Lebens im wunderschönen Naturpark Thal und bin erst seit kurzem in Bleienbach. Ich muss mich noch etwas eingewöhnen, aber dank meiner ausgeprägten Neugier habe ich schon viel entdeckt.
 Ich liebe es, mit meiner Schnauze alles ganz genau zu untersuchen und nichts ist vor mir sicher.
 
 
-![Alt text](../assets/ada.jpg)	und ich bin der Co-Co-Coach und behalte immer den Überblick.
+![Ada](../assets/ada.jpg?webp)	und ich bin der Co-Co-Coach und behalte immer den Überblick.
 
-![Alt text](../assets/IMG_5747.jpg)
+![Pferd und Mensch gehen im Gleichschritt](../assets/IMG_5747.jpg?webp)
 > Auch der längste Weg beginnt mit dem ersten Schritt. (chinesisches Sprichwort)
