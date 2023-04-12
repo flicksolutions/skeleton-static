@@ -26,6 +26,16 @@ function headings() {
 	};
   };
 
+  function removePTagsFromImages() {
+	return function (tree) {
+	  tree.children.forEach((node, i) => {
+		if (node.tagName === 'p' && node.children.length === 1 && node.children[0].tagName === 'img') {
+			tree.children[i] = node.children[0]
+		  }
+	  })
+	}
+  }
+
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
 
@@ -39,7 +49,8 @@ const config = defineConfig({
 	],
 	rehypePlugins: [
 		slug,
-		[ autolink, { behavior: 'wrap' } ]
+		[ autolink, { behavior: 'wrap' } ],
+		removePTagsFromImages
 	]
 });
 

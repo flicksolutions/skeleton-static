@@ -15,7 +15,7 @@ Das pferdegestützte Coaching findet vom Boden aus statt. Das heisst, es wird ni
 
 <Gallery>
 
-20221013_105234.jpg
+![Alt text](../assets/20221013_105234.jpg?webp)
 
 ![Alt text](../assets/IMG_5762.jpg?webp)
 
