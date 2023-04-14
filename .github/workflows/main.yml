@@ -1,8 +1,4 @@
 name: deploy
-env:
-  PUBLIC_GITHUBUSER: "flicksolutions"
-  PUBLIC_GITHUBREPONAME: "skeleton-static"
-  PUBLIC_GITHUBBRANCH: "master"
 on:
   push:
     branches:

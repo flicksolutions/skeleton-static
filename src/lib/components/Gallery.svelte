@@ -1,8 +1,7 @@
 <script>
     import Carousel from 'svelte-carousel';
     import { browser } from '$app/environment';
-    import { PUBLIC_GITHUBREPONAME, PUBLIC_GITHUBUSER, PUBLIC_GITHUBBRANCH } from '$env/static/public';
-    import { md } from '$lib/breakpoints';
+    import { breakpoints, ghuser, ghrepo, ghbranch } from '$lib/config';
 
     export let srcs = [];
     export let alts = [];
@@ -12,7 +11,7 @@
             output: 'webp',
             ...options
         });
-        const githubUrl = `https://raw.githubusercontent.com/${PUBLIC_GITHUBUSER}/${PUBLIC_GITHUBREPONAME}/${PUBLIC_GITHUBBRANCH}/src/lib/assets/${src}`;
+        const githubUrl = `https://raw.githubusercontent.com/${ghuser}/${ghrepo}/${ghbranch}/src/lib/assets/${src}`;
 
         return `https://wsrv.nl/?url=${githubUrl}&${params}`;
     }
@@ -27,7 +26,7 @@
 <div class="carousel-container">
     <Carousel>
             {#each srcs as src, i}
-                <img src={createWsrvSrc(src,{w: 300})} srcset={createWsrvSrcSet(src)} sizes="{`(min-width:${md}) 30vw, 100vw`}" alt="{alts[i]}" />
+                <img src={createWsrvSrc(src,{w: 300})} srcset={createWsrvSrcSet(src)} sizes="{`(min-width:${breakpoints.md}) 30vw, 100vw`}" alt="{alts[i]}" />
             {/each}
     </Carousel>
 </div>
