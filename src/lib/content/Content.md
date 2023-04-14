@@ -27,13 +27,13 @@ Das pferdegestützte Coaching findet vom Boden aus statt. Das heisst, es wird ni
 </Gallery>
 
 ## Bei welchen Themen ist ein pferdegestütztes Coaching hilfreich?
-•	Klarheit schaffen
-•	Selbstvertrauen aufbauen
-•	Achtsamkeit uns selbst wie auch anderen gegenüber fördern
-•	Kommunikation verbessern
-•	Entscheidungsfindung in schwierigen Lebensphasen unterstützen
-•	Grenzen setzen
-•	Unser Unterbewusstsein besser kennen lernen
+- Klarheit schaffen
+- Selbstvertrauen aufbauen
+- Achtsamkeit uns selbst wie auch anderen gegenüber fördern
+- Kommunikation verbessern
+- Entscheidungsfindung in schwierigen Lebensphasen unterstützen
+- Grenzen setzen
+- Unser Unterbewusstsein besser kennen lernen
 
 Preise:	CHF 80.- / 60 Minuten
 		Die Dauer eines Coachings variiert zwischen 90 bis 120 Minuten.
