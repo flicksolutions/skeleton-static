@@ -14,26 +14,16 @@ Ziel ist immer, den Coachee auf seinem Weg zur Selbstreflexion und im Finden von
 Das pferdegestützte Coaching findet vom Boden aus statt. Das heisst, es wird nicht geritten, sondern alle Übungen werden mit dem Pferd an der Hand absolviert.
 
 <Gallery>
-
-![Alt text](../assets/20221013_105234.jpg?webp)
-
-![Alt text](../assets/IMG_5762.jpg?webp)
-
-![Alt text](../assets/PXL_20221231_135513544.MP.jpg?webp)
-
-![Alt text](../assets/PXL_20221231_135633716.jpg?webp)
-
-![Alt text](../assets/PXL_20221231_135731446.MP.jpg?webp)
-
-![Alt text](../assets/PXL_20221231_135927111.jpg?webp)
-
-![Alt text](../assets/PXL_20221231_140121518.jpg?webp)
-
-![Alt text](../assets/PXL_20221231_140624249.jpg?webp)
-
-![Alt text](../assets/PXL_20221231_140650354.MP.jpg?webp)
-
-![Alt text](../assets/PXL_20221231_140311265.jpg?webp)
+![Alt text](../assets/20221013_105234.jpg)
+![Alt text](../assets/IMG_5762.jpg)
+![Alt text](../assets/PXL_20221231_135513544.MP.jpg)
+![Alt text](../assets/PXL_20221231_135633716.jpg)
+![Alt text](../assets/PXL_20221231_135731446.MP.jpg)
+![Alt text](../assets/PXL_20221231_135927111.jpg)
+![Alt text](../assets/PXL_20221231_140121518.jpg)
+![Alt text](../assets/PXL_20221231_140624249.jpg)
+![Alt text](../assets/PXL_20221231_140650354.MP.jpg)
+![Alt text](../assets/PXL_20221231_140311265.jpg)
 </Gallery>
 
 ## Bei welchen Themen ist ein pferdegestütztes Coaching hilfreich?

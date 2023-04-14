@@ -26,7 +26,27 @@ function headings() {
 	};
   };
 
-  function removePTagsFromImages() {
+  // Writes the image paths of all images between the opening and closing tags of a Gallery component as props to that component.
+  function addImgAsProps() {
+	let visit;
+	return async function transformer(tree) {
+		if (!visit) {
+			visit = (await import('unist-util-visit')).visit;
+		}
+		visit(tree, 'html', (node) => {
+			if (node.value.includes('<Gallery')) {
+				const regexp = /(?<=\]\(\.\.\/assets\/)(.+?)(?=\))/g;
+				let srcs = node.value.match(regexp);
+				const alts = node.value.match(/(?<=!\[)(.+?)(?=\]\()/g);
+				if (!srcs) return
+				node.value = `<Gallery srcs={${JSON.stringify(srcs)}} alts={${JSON.stringify(alts)}}></Gallery>`;
+			}
+		}
+		);
+	};
+  }
+
+  /*function removePTagsFromImages() {
 	return function (tree) {
 	  tree.children.forEach((node, i) => {
 		if (node.tagName === 'p' && node.children.length === 1 && node.children[0].tagName === 'img') {
@@ -34,7 +54,7 @@ function headings() {
 		  }
 	  })
 	}
-  }
+  }*/
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
@@ -45,12 +65,13 @@ const config = defineConfig({
 
 	remarkPlugins: [
 		abbr,
-		headings
+		headings,
+		addImgAsProps
 	],
 	rehypePlugins: [
 		slug,
 		[ autolink, { behavior: 'wrap' } ],
-		removePTagsFromImages
+		//removePTagsFromImages
 	]
 });
 
