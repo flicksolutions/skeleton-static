@@ -1,7 +1,7 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import abbr from 'remark-abbr';
 import slug from 'rehype-slug';
-import autolink from 'rehype-autolink-headings';
+// import autolink from 'rehype-autolink-headings';
 
 function headings() {
 	let visit;
@@ -70,7 +70,7 @@ const config = defineConfig({
 	],
 	rehypePlugins: [
 		slug,
-		[ autolink, { behavior: 'wrap' } ],
+		//[ autolink, { behavior: 'wrap' } ],
 		//removePTagsFromImages
 	]
 });
