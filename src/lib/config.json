@@ -7,5 +7,27 @@
         "md": 600,
         "lg": 900,
         "xl": 1200
+    },
+    "footer": {
+        "sm": {
+            "logos": [
+                {
+                    "src": "https://placehold.it/100x100",
+                    "alt": "Logo 1"
+                },
+                {
+                    "src": "https://placehold.it/100x100",
+                    "alt": "Logo 2"
+                },
+                {
+                    "src": "https://placehold.it/100x100",
+                    "alt": "Logo 3"
+                }
+            ],
+            "content": "<a href=\"#Kontakt\">Kontakt</a>"
+        },
+        "md": {
+            "content": "Rosmarie Locher | Dorfstrasse 5 3368 Bleienbach | 076 304 16 90 | <a href:\"mailto:rosmarie@molano.ch\">rosmarie@molano.ch</a>"
+        }
     }
 }

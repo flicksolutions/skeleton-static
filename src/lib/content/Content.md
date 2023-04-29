@@ -2,7 +2,7 @@
     import Gallery from '$lib/components/Gallery.svelte';
 </script>
 
-# MoLaNo Pferdegestütztes Coaching
+# MoLano - pferdegestütztes Coaching
 
 ## Was ist pferdegestütztes Coaching?
 Pferde sind Meister in der Non-Verbalen Kommunikation und können uns Menschen dadurch helfen, uns selber besser kennen und verstehen zu lernen. Ihre Fähigkeit, in Sekundenschnelle auf ihre Umgebung reagieren zu können, sichert seit jeher ihr Überleben und das Zusammenleben in der Herde. Gerade durch diese Fähigkeit sind sie hervorragende Beobachter und «lesen» uns wie ein offenes Buch. Sie spiegeln unsere Gefühle, zeigen uns schonungslos auf, wie es gerade um uns steht …. ob wir wollen oder nicht. Sie leben im Hier und Jetzt, sind absolut ehrlich, unbestechlich, bewerten uns nicht und sind immer wieder bereit, sich auf uns einzulassen.
