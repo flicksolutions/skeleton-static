@@ -1,7 +1,4 @@
 <script>
-
-
-
     /** @type {import('./$types').LayoutData} */
     export let data;
     const { sections, title } = data;
@@ -50,9 +47,7 @@
 
 <svelte:window on:resize={setBr} bind:innerWidth={windowWidth} />
 
-<header>
-    <Head {title} menuData={sections} {br} />
-</header>
+<Head {title} menuData={sections} {br} />
 
 <main>
     <slot />
@@ -63,5 +58,4 @@
 </footer>
 
 <style lang="scss">
-
 </style>

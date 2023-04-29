@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Open Sans';
-    src: url('/fonts/OpenSans_wdth,wght.woff2') format('woff2') tech('variations');
+    src: url('/fonts/OpenSans_wdth,wght.woff2') format('woff2');
     font-weight: 300 800;
     font-stretch: 75% 100%;
     font-style: normal;
@@ -8,13 +8,20 @@
 
 @font-face {
 font-family: 'Comfortaa';
-src: url('/fonts/Comfortaa_wght.woff2') format('woff2') tech('variations');
+src: url('/fonts/Comfortaa_wght.woff2') format('woff2');
 font-weight: 300 700;
 font-style: normal;
 }
 
 body {
 font-family: 'Open Sans', sans-serif;
+margin: 0;
+padding: 0;
+--bg-color: #EEE7EC;
+--title-color: #597E99;
+--text-color: black;
+--global-padding: .8rem;
+--padding-sm: .4rem;
 }
 
 h1, h2, h3 {
