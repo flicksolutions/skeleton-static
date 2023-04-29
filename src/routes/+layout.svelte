@@ -51,7 +51,7 @@
 <svelte:window on:resize={setBr} bind:innerWidth={windowWidth} />
 
 <header>
-    <Head title={title} menuData={sections} br={br} />
+    <Head {title} menuData={sections} {br} />
 </header>
 
 <main>
@@ -59,7 +59,7 @@
 </main>
 
 <footer>
-    <Foot logos={logos} content={footerContent} br={br} />
+    <Foot {logos} content={footerContent} {br} />
 </footer>
 
 <style lang="scss">
