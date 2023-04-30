@@ -1,59 +1,59 @@
 {
-    "ghuser": "flicksolutions",
-    "ghrepo": "skeleton-static",
-    "ghbranch": "master",
-    "breakpoints": {
-        "sm": 300,
-        "md": 600,
-        "lg": 900,
-        "xl": 1200
-    },
-    "header": {
-        "sm": {
-            "menu": [
-                {
-                    "title": "Coaching",
-                    "href": "was-ist-pferdegestütztes-coaching"
-                },
-                {
-                    "title": "Zielgruppe",
-                    "href": "bei-welchen-themen-ist-ein-pferdegestütztes-coaching-hilfreich"
-                },
-                {
-                    "title": "Wer wir sind",
-                    "href": "wer-wir-sind"
-                },
-                {
-                    "title": "Preise",
-                    "href": "preise"
-                },
-                {
-                    "title": "Kontakt",
-                    "href": "kontakt"
-                }
-            ]
-        }
-    },
-    "footer": {
-        "sm": {
-            "logos": [
-                {
-                    "src": "https://placehold.it/100x100",
-                    "alt": "Logo 1"
-                },
-                {
-                    "src": "https://placehold.it/100x100",
-                    "alt": "Logo 2"
-                },
-                {
-                    "src": "https://placehold.it/100x100",
-                    "alt": "Logo 3"
-                }
-            ],
-            "content": "<a href=\"#Kontakt\">Kontakt</a>"
-        },
-        "md": {
-            "content": "Rosmarie Locher | Dorfstrasse 5 3368 Bleienbach | 076 304 16 90 | <a href:\"mailto:rosmarie@molano.ch\">rosmarie@molano.ch</a>"
-        }
-    }
+	"ghuser": "flicksolutions",
+	"ghrepo": "skeleton-static",
+	"ghbranch": "master",
+	"breakpoints": {
+		"sm": 300,
+		"md": 600,
+		"lg": 900,
+		"xl": 1200
+	},
+	"header": {
+		"sm": {
+			"menu": [
+				{
+					"title": "Coaching",
+					"href": "was-ist-pferdegestütztes-coaching"
+				},
+				{
+					"title": "Zielgruppe",
+					"href": "bei-welchen-themen-ist-ein-pferdegestütztes-coaching-hilfreich"
+				},
+				{
+					"title": "Wer wir sind",
+					"href": "wer-wir-sind"
+				},
+				{
+					"title": "Preise",
+					"href": "preise"
+				},
+				{
+					"title": "Kontakt",
+					"href": "kontakt"
+				}
+			]
+		}
+	},
+	"footer": {
+		"sm": {
+			"logos": [
+				{
+					"src": "https://placehold.it/100x100",
+					"alt": "Logo 1"
+				},
+				{
+					"src": "https://placehold.it/100x100",
+					"alt": "Logo 2"
+				},
+				{
+					"src": "https://placehold.it/100x100",
+					"alt": "Logo 3"
+				}
+			],
+			"content": "<a href=\"#Kontakt\">Kontakt</a>"
+		},
+		"md": {
+			"content": "Rosmarie Locher | Dorfstrasse 5 3368 Bleienbach | 076 304 16 90 | <a href:\"mailto:rosmarie@molano.ch\">rosmarie@molano.ch</a>"
+		}
+	}
 }

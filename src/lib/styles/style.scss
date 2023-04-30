@@ -1,53 +1,55 @@
 @font-face {
-    font-family: 'Open Sans';
-    src: url('/fonts/OpenSans_wdth,wght.woff2') format('woff2');
-    font-weight: 300 800;
-    font-stretch: 75% 100%;
-    font-style: normal;
+	font-family: 'Open Sans';
+	src: url('/fonts/OpenSans_wdth,wght.woff2') format('woff2');
+	font-weight: 300 800;
+	font-stretch: 75% 100%;
+	font-style: normal;
 }
 
 @font-face {
-font-family: 'Comfortaa';
-src: url('/fonts/Comfortaa_wght.woff2') format('woff2');
-font-weight: 300 700;
-font-style: normal;
+	font-family: 'Comfortaa';
+	src: url('/fonts/Comfortaa_wght.woff2') format('woff2');
+	font-weight: 300 700;
+	font-style: normal;
 }
 
 body {
-font-family: 'Open Sans', sans-serif;
-margin: 0;
-padding: 0;
---bg-color: #EEE7EC;
---title-color: #597E99;
---text-color: black;
---shadow-color: #8D8787;
---global-padding: .8rem;
---padding-sm: .4rem;
---small-height: 3rem;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	--bg-color: #eee7ec;
+	--title-color: #597e99;
+	--text-color: black;
+	--shadow-color: #8d8787;
+	--global-padding: 0.8rem;
+	--padding-sm: 0.4rem;
+	--small-height: 3rem;
 }
 
-h1, h2, h3 {
-font-family: 'Comfortaa', cursive;
+h1,
+h2,
+h3 {
+	font-family: 'Comfortaa', cursive;
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .bp-img {
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    img{
-        object-fit: contain;
-        object-position: center;
-    }
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	img {
+		object-fit: contain;
+		object-position: center;
+	}
 }
 .bp-wrap > div:first-child {
-    background-color: var(--bg-color);
+	background-color: var(--bg-color);
 }
 
 .bp-count {
-    font-weight: 700;
-    color: var(--text-color);
+	font-weight: 700;
+	color: var(--text-color);
 }

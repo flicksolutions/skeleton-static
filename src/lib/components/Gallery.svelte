@@ -1,29 +1,31 @@
 <script>
-    import { onMount } from 'svelte';
-    import { browser } from '$app/environment';
-    import { breakpoints, ghuser, ghrepo, ghbranch } from '$lib/config';
-    import BiggerPicture from 'bigger-picture/svelte';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import { ghuser, ghrepo, ghbranch } from '$lib/config';
+	import BiggerPicture from 'bigger-picture/svelte';
 
-    let bp;
-    let carouselContainer;
-    export let srcs = [];
-    export let alts = [];
+	let bp;
+	let carouselContainer;
+	export let srcs = [];
+	export let alts = [];
 
-    function createWsrvSrc(src, options = {}) {
-        const params = new URLSearchParams({
-            output: 'webp',
-            ...options
-        });
-        const githubUrl = `https://raw.githubusercontent.com/${ghuser}/${ghrepo}/${ghbranch}/src/lib/assets/${src}`;
+	function createWsrvSrc(src, options = {}) {
+		const params = new URLSearchParams({
+			output: 'webp',
+			...options
+		});
+		const githubUrl = `https://raw.githubusercontent.com/${ghuser}/${ghrepo}/${ghbranch}/src/lib/assets/${src}`;
 
-        return `https://wsrv.nl/?url=${githubUrl}&${params}`;
-    }
+		return `https://wsrv.nl/?url=${githubUrl}&${params}`;
+	}
 
-    function createWsrvSrcSet(src, sizes = [300, 900, 1500, 2100, 3000]) {
-        return sizes.map(size => `${createWsrvSrc(src, { w: size, fit: "contain" })} ${size}w`).join(', ');
-    }
+	function createWsrvSrcSet(src, sizes = [300, 900, 1500, 2100, 3000]) {
+		return sizes
+			.map((size) => `${createWsrvSrc(src, { w: size, fit: 'contain' })} ${size}w`)
+			.join(', ');
+	}
 
-    /*function openGallery(e) {
+	/*function openGallery(e) {
         bp.open({
             items: srcs.map(src => ({
                 img: createWsrvSrcSet(src),
@@ -33,54 +35,53 @@
         });
     }*/
 
-    onMount(() => {
-        bp = BiggerPicture({
-            target: carouselContainer,
-        })
-        const items = srcs.map(src => ({
-                thumb: createWsrvSrc(src, { h: 300 }),
-                img: createWsrvSrcSet(src),
-                alt: alts[srcs.indexOf(src)],
-            }))
-        bp.open({
-            items,
-            inline: true,
-            scale: 1,
-            intro: "fadeup",
-            noClose: true,
-            onImageClick(inlineContainer, inlineActiveItem) {
-                /*if (!(inlineContainer.clientWidth < 800)) {
+	onMount(() => {
+		bp = BiggerPicture({
+			target: carouselContainer
+		});
+		const items = srcs.map((src) => ({
+			thumb: createWsrvSrc(src, { h: 300 }),
+			img: createWsrvSrcSet(src),
+			alt: alts[srcs.indexOf(src)]
+		}));
+		bp.open({
+			items,
+			inline: true,
+			scale: 1,
+			intro: 'fadeup',
+			noClose: true,
+			onImageClick(inlineContainer, inlineActiveItem) {
+				/*if (!(inlineContainer.clientWidth < 800)) {
                     console.log("not small");
                 return;
                 }*/
-                const bpImg = inlineContainer.querySelector(".bp-img");
-                BiggerPicture({ target: document.body }).open({
-                items: items.map((item) => ({
-                    ...item,
-                    element: bpImg
-                })),
-                position: inlineActiveItem.i,
-                onUpdate(c, fullScreenActiveItem) {
-                    bp.setPosition(fullScreenActiveItem.i);
-                    setTimeout(() => {
-                    // update item element for close transition
-                    let elements = inlineContainer.querySelectorAll(".bp-img");
-                    fullScreenActiveItem.element = elements[elements.length - 1];
-                    }, 0);
-                },
-                onOpen: () => inlineContainer.classList.add("hide-controls"),
-                onClosed: () => inlineContainer.classList.remove("hide-controls")
-                });
-                return true;
-            },
-        });
-    });
-
+				const bpImg = inlineContainer.querySelector('.bp-img');
+				BiggerPicture({ target: document.body }).open({
+					items: items.map((item) => ({
+						...item,
+						element: bpImg
+					})),
+					position: inlineActiveItem.i,
+					onUpdate(c, fullScreenActiveItem) {
+						bp.setPosition(fullScreenActiveItem.i);
+						setTimeout(() => {
+							// update item element for close transition
+							let elements = inlineContainer.querySelectorAll('.bp-img');
+							fullScreenActiveItem.element = elements[elements.length - 1];
+						}, 0);
+					},
+					onOpen: () => inlineContainer.classList.add('hide-controls'),
+					onClosed: () => inlineContainer.classList.remove('hide-controls')
+				});
+				return true;
+			}
+		});
+	});
 </script>
 
 {#if browser}
-    <div class="carousel-container" bind:this={carouselContainer}>
-        <!--{#each srcs as src, i}
+	<div class="carousel-container" bind:this={carouselContainer}>
+		<!--{#each srcs as src, i}
 
         <a
             href={createWsrvSrc(src)}
@@ -89,19 +90,19 @@
             <img src={createWsrvSrc(src,{w: 300})} srcset={createWsrvSrcSet(src)} sizes="{`(min-width:${breakpoints.md}) 30vw, 100vw`}" alt="{alts[i]}" />
         </a>
         {/each}-->
-    </div>
+	</div>
 {/if}
 
 <style lang="scss">
-    .carousel-container {
-        position: relative;
-        width: 100%;
-        height: 300px;
+	.carousel-container {
+		position: relative;
+		width: 100%;
+		height: 300px;
 
-        /*:global(img) {
+		/*:global(img) {
             max-width: 100%;
             height: 200px;
             object-fit: contain;
         }*/
-    }
+	}
 </style>

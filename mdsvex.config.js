@@ -7,27 +7,27 @@ function headings() {
 	let visit;
 	let tree_to_string;
 	return async function transformer(tree, vFile) {
-	  if (!visit) {
-		tree_to_string = (await import('mdast-util-to-string')).toString;
-		visit = (await import('unist-util-visit')).visit;
-	  }
+		if (!visit) {
+			tree_to_string = (await import('mdast-util-to-string')).toString;
+			visit = (await import('unist-util-visit')).visit;
+		}
 
-	  vFile.data.headings = [];
+		vFile.data.headings = [];
 
-	  visit(tree, 'heading', (node) => {
-		vFile.data.headings.push({
-		  level: node.depth,
-		  title: tree_to_string(node),
+		visit(tree, 'heading', (node) => {
+			vFile.data.headings.push({
+				level: node.depth,
+				title: tree_to_string(node)
+			});
 		});
-	  });
 
-	  if (!vFile.data.fm) vFile.data.fm = {};
-	  vFile.data.fm.headings = vFile.data.headings;
+		if (!vFile.data.fm) vFile.data.fm = {};
+		vFile.data.fm.headings = vFile.data.headings;
 	};
-  };
+}
 
-  // Writes the image paths of all images between the opening and closing tags of a Gallery component as props to that component.
-  function addImgAsProps() {
+// Writes the image paths of all images between the opening and closing tags of a Gallery component as props to that component.
+function addImgAsProps() {
 	let visit;
 	return async function transformer(tree) {
 		if (!visit) {
@@ -38,15 +38,16 @@ function headings() {
 				const regexp = /(?<=\]\(\.\.\/assets\/)(.+?)(?=\))/g;
 				let srcs = node.value.match(regexp);
 				const alts = node.value.match(/(?<=!\[)(.+?)(?=\]\()/g);
-				if (!srcs) return
-				node.value = `<Gallery srcs={${JSON.stringify(srcs)}} alts={${JSON.stringify(alts)}}></Gallery>`;
+				if (!srcs) return;
+				node.value = `<Gallery srcs={${JSON.stringify(srcs)}} alts={${JSON.stringify(
+					alts
+				)}}></Gallery>`;
 			}
-		}
-		);
+		});
 	};
-  }
+}
 
-  /*function removePTagsFromImages() {
+/*function removePTagsFromImages() {
 	return function (tree) {
 	  tree.children.forEach((node, i) => {
 		if (node.tagName === 'p' && node.children.length === 1 && node.children[0].tagName === 'img') {
@@ -63,13 +64,9 @@ const config = defineConfig({
 		dashes: 'oldschool'
 	},
 
-	remarkPlugins: [
-		abbr,
-		headings,
-		addImgAsProps
-	],
+	remarkPlugins: [abbr, headings, addImgAsProps],
 	rehypePlugins: [
-		slug,
+		slug
 		//[ autolink, { behavior: 'wrap' } ],
 		//removePTagsFromImages
 	]

@@ -1,7 +1,7 @@
 # This workflow is for repos generated from the template. It synchronizes changes in the template to the child.
 
 on:
-    # cronjob trigger
+  # cronjob trigger
   #schedule:
   #- cron:  "0 0 * * 1"
   # manual trigger
@@ -18,4 +18,4 @@ jobs:
         uses: AndreasAugustin/actions-template-sync@v0.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          source_repo_path:  flicksolutions/skeleton-static
+          source_repo_path: flicksolutions/skeleton-static
