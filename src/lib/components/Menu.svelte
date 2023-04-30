@@ -23,7 +23,7 @@
 {/if}
 
 {#if open || br !== 'sm'}
-    <ul>
+    <ul class:open>
         {#each menuItems as section}
             <li>
                 <a href="#{section.href}">{section.title}</a>
@@ -38,14 +38,22 @@
         display: flex;
         flex-flow: column nowrap;
         list-style-type: none;
-        margin: 0;
+        margin: 0 calc(-1 * var(--global-padding));
         padding: 0;
+        &.open {
+            margin-bottom: calc(-1 * var(--global-padding));
+        }
         a {
             color: var(--text-color);
             text-decoration: none;
+            display: block;
         }
         li {
-            font-size: 1.3rem;
+            line-height: 2;
+            font-size: 1.5rem;
+            font-weight: 500;
+            border-top: solid 2px var(--shadow-color);
+            padding: 0 var(--global-padding);
         }
     }
 

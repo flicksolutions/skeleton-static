@@ -23,7 +23,8 @@
 
     }
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        font-weight: 800;
         justify-self: center;
         width: 30vw;
         color: var(--title-color);
