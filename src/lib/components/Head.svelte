@@ -56,14 +56,14 @@
         }
 
         &.small {
-            height: 3rem;
-            grid-template-rows: 3rem;
+            height: var(--small-height);
+            grid-template-rows: var(--small-height);
             h1 {
                 width: initial;
             }
             &.open {
                 height: 21rem;
-                grid-template-rows: 3rem 18rem;
+                grid-template-rows: var(--small-height) 18rem;
             }
         }
     }

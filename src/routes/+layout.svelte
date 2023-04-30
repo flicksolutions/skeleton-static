@@ -32,14 +32,10 @@
 <svelte:window on:resize={setBr} bind:innerWidth={windowWidth} />
 
 <Head {title} menuData={menuContent} {br} />
-
 <main>
     <slot />
 </main>
-
-<footer>
-    <Foot {logos} content={footerContent} {br} />
-</footer>
+<Foot {logos} content={footerContent} {br} />
 
 <style lang="scss">
 </style>
