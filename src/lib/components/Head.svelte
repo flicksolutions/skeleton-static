@@ -6,10 +6,27 @@
     export let menuData;
     export let br;
 
+    const [ major, minor ] = title.split(' - ');
+
+    let scrollY = 0;
+
 </script>
-<header>
+
+<svelte:window bind:scrollY={scrollY} />
+
+<header class:small={scrollY > 100}>
     <img src="{Logo}" alt="Logo" />
-    <h1>{@html title}</h1>
+    <h1>
+        {#if br != 'sm'}
+            {title}
+        {:else}
+            {#if scrollY <= 100}
+                {major} {minor}
+            {:else}
+                {major}
+            {/if}
+        {/if}
+    </h1>
     <Menu data={menuData} {br} />
 </header>
 
@@ -20,7 +37,22 @@
         align-items: center;
         padding: var(--global-padding);
         background-color: var(--bg-color);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 0 10px var(--shadow-color);
+        height: 8rem;
+        transition: height 0.3s ease-in-out;
+        * {
+            min-height: 0;
+        }
 
+        &.small {
+            height: 3rem;
+            h1 {
+                width: initial;
+            }
+        }
     }
     h1 {
         font-size: 1.5rem;
@@ -30,8 +62,7 @@
         color: var(--title-color);
     }
     img {
-        height: 100%;
         justify-self: start;
-        max-height: 13vh;
+        max-height: 100%;
     }
 </style>
