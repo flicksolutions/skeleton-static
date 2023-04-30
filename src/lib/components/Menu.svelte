@@ -1,9 +1,20 @@
 <script>
     import Burger from '$lib/components/Burger.svelte';
 
-    export let br;
+    export let br = 'sm';
     export let data;
-
+    let menuItems;
+    $:{
+        if (typeof data === "Array") {
+            menuItems = data;
+        } else if (br) {
+            menuItems = data[br];
+        } else if (data) {
+            menuItems = data.sm;
+        } else {
+            menuItems = [];
+        }
+    }
     let open = false;
 </script>
 
@@ -13,7 +24,7 @@
 
 {#if open || br !== 'sm'}
     <ul>
-        {#each data as section}
+        {#each menuItems as section}
             <li>
                 <a href="#{section.href}">{section.title}</a>
             </li>

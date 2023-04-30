@@ -8,6 +8,32 @@
         "lg": 900,
         "xl": 1200
     },
+    "header": {
+        "sm": {
+            "menu": [
+                {
+                    "title": "Coaching",
+                    "href": "was-ist-pferdegestütztes-coaching"
+                },
+                {
+                    "title": "Zielgruppe",
+                    "href": "bei-welchen-themen-ist-ein-pferdegestütztes-coaching-hilfreich"
+                },
+                {
+                    "title": "Wer wir sind",
+                    "href": "wer-wir-sind"
+                },
+                {
+                    "title": "Preise",
+                    "href": "preise"
+                },
+                {
+                    "title": "Kontakt",
+                    "href": "kontakt"
+                }
+            ]
+        }
+    },
     "footer": {
         "sm": {
             "logos": [
