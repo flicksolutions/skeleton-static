@@ -27,7 +27,7 @@
     <Burger {open} on:menuClick />
 {/if}
 
-{#if open || defer || br !== 'sm'}
+{#if defer || br !== 'sm'}
     <ul class:open>
         {#each menuItems as section}
             <li>
@@ -44,6 +44,7 @@
         flex-flow: column nowrap;
         list-style-type: none;
         margin: 0 calc(-1 * var(--global-padding));
+        min-height: 0;
         padding: 0;
         opacity: 0;
         transition: opacity 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;

@@ -35,6 +35,7 @@
     header {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 8rem;
         align-items: center;
         padding: var(--global-padding);
         background-color: var(--bg-color);
@@ -46,7 +47,8 @@
         transition: height 0.3s ease-in-out;
 
         &.open {
-            height: 23rem;
+            height: 26rem;
+            grid-template-rows: 8rem 18rem;
         }
 
         * {
@@ -55,11 +57,13 @@
 
         &.small {
             height: 3rem;
+            grid-template-rows: 3rem;
             h1 {
                 width: initial;
             }
             &.open {
-                height: 18rem;
+                height: 21rem;
+                grid-template-rows: 3rem 18rem;
             }
         }
     }
@@ -69,9 +73,11 @@
         justify-self: center;
         width: 30vw;
         color: var(--title-color);
+        grid-row: 1;
     }
     img {
         justify-self: start;
         max-height: 100%;
+        grid-row: 1;
     }
 </style>
