@@ -43,3 +43,11 @@ img {
         object-position: center;
     }
 }
+.bp-wrap > div:first-child {
+    background-color: var(--bg-color);
+}
+
+.bp-count {
+    font-weight: 700;
+    color: var(--text-color);
+}

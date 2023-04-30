@@ -1,5 +1,5 @@
 <script>
-    import Logo from '$lib/assets/logo.svg';
+    import logo from '$lib/assets/logo.svg';
     import Menu from '$lib/components/Menu.svelte';
 
     export let title;
@@ -16,7 +16,7 @@
 <svelte:window bind:scrollY={scrollY} />
 
 <header class:small={scrollY > 100} class:open>
-    <img src="{Logo}" alt="Logo" />
+    <img src="{logo}" alt="Logo" />
     <h1>
         {#if br != 'sm'}
             {title}
