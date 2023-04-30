@@ -3,6 +3,7 @@
 
     export let br = 'sm';
     export let data;
+    export let open = false;
     let menuItems;
     $:{
         if (typeof data === "Array") {
@@ -15,14 +16,18 @@
             menuItems = [];
         }
     }
-    let open = false;
-</script>
 
+    let defer = open;
+    $: setTimeout(() => {
+        defer = open;
+    }, 300);
+
+</script>
 {#if br === 'sm'}
-    <Burger {open} on:menuClick={() => open= !open} />
+    <Burger {open} on:menuClick />
 {/if}
 
-{#if open || br !== 'sm'}
+{#if open || defer || br !== 'sm'}
     <ul class:open>
         {#each menuItems as section}
             <li>
@@ -40,8 +45,11 @@
         list-style-type: none;
         margin: 0 calc(-1 * var(--global-padding));
         padding: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
         &.open {
             margin-bottom: calc(-1 * var(--global-padding));
+            opacity: 1;
         }
         a {
             color: var(--text-color);

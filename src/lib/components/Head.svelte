@@ -9,12 +9,13 @@
     const [ major, minor ] = title.split(' - ');
 
     let scrollY = 0;
+    let open = false;
 
 </script>
 
 <svelte:window bind:scrollY={scrollY} />
 
-<header class:small={scrollY > 100}>
+<header class:small={scrollY > 100} class:open>
     <img src="{Logo}" alt="Logo" />
     <h1>
         {#if br != 'sm'}
@@ -27,7 +28,7 @@
             {/if}
         {/if}
     </h1>
-    <Menu data={menuData} {br} />
+    <Menu data={menuData} {br} {open} on:menuClick={() => open= !open} />
 </header>
 
 <style lang="scss">
@@ -43,6 +44,11 @@
         box-shadow: 0 0 10px var(--shadow-color);
         height: 8rem;
         transition: height 0.3s ease-in-out;
+
+        &.open {
+            height: 23rem;
+        }
+
         * {
             min-height: 0;
         }
@@ -51,6 +57,9 @@
             height: 3rem;
             h1 {
                 width: initial;
+            }
+            &.open {
+                height: 18rem;
             }
         }
     }
