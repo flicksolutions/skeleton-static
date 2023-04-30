@@ -35,6 +35,7 @@
     }
     path {
         stroke-width: 10;
+        transition: transform 0.3s ease-in-out;
     }
     .open {
         .upper {
