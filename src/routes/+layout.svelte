@@ -38,4 +38,12 @@
 <Foot {logos} content={footerContent} {br} />
 
 <style lang="scss">
+    main {
+        padding: var(--global-padding);
+
+        :global(.carousel-container) {
+            margin: 0 calc(-1 * var(--global-padding));
+            width: 100vw;
+        }
+    }
 </style>
