@@ -1,29 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import { ghuser, ghrepo, ghbranch } from '$lib/config';
+	import { createWsrvSrc, createWsrvSrcSet } from '$lib/functions';
 	import BiggerPicture from 'bigger-picture/svelte';
 
 	let bp;
 	let carouselContainer;
 	export let srcs = [];
 	export let alts = [];
-
-	function createWsrvSrc(src, options = {}) {
-		const params = new URLSearchParams({
-			output: 'webp',
-			...options
-		});
-		const githubUrl = `https://raw.githubusercontent.com/${ghuser}/${ghrepo}/${ghbranch}/src/lib/assets/${src}`;
-
-		return `https://wsrv.nl/?url=${githubUrl}&${params}`;
-	}
-
-	function createWsrvSrcSet(src, sizes = [300, 900, 1500, 2100, 3000]) {
-		return sizes
-			.map((size) => `${createWsrvSrc(src, { w: size, fit: 'contain' })} ${size}w`)
-			.join(', ');
-	}
 
 	/*function openGallery(e) {
         bp.open({
