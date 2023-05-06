@@ -47,6 +47,31 @@ function addImgAsProps() {
 	};
 }
 
+// rehype Plugin to wrap images in a link to the image itself
+function autolinkImages() {
+	let visit;
+	return async function transformer(tree) {
+		if (!visit) {
+			visit = (await import('unist-util-visit')).visit;
+		}
+		visit(tree, 'element', (node, index, parent) => {
+			if (node.tagName === 'img') {
+				const linkNode = {
+					type: 'element',
+					tagName: 'a',
+					properties: {
+						href: node.properties.src,
+						target: '_self',
+						class: 'lightbox'
+					},
+					children: [node]
+				};
+				parent.children[index] = linkNode;
+			}
+		});
+	};
+}
+
 /*function removePTagsFromImages() {
 	return function (tree) {
 	  tree.children.forEach((node, i) => {
@@ -66,7 +91,8 @@ const config = defineConfig({
 
 	remarkPlugins: [abbr, headings, addImgAsProps],
 	rehypePlugins: [
-		slug
+		slug,
+		autolinkImages
 		//[ autolink, { behavior: 'wrap' } ],
 		//removePTagsFromImages
 	]
