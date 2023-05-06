@@ -38,8 +38,8 @@
 		"sm": {
 			"logos": [
 				{
-					"src": "https://placehold.it/100x100",
-					"alt": "Logo 1"
+					"src": "../assets/SVPC-Mitgliedsbutton.png",
+					"alt": "Mitglied SVPC"
 				},
 				{
 					"src": "https://placehold.it/100x100",
