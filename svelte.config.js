@@ -15,7 +15,10 @@ const config = {
 		adapter: adapter()
 	},
 
-	preprocess: [mdsvex(mdsvexConfig), vitePreprocess(), importAssets()]
+	preprocess: [mdsvex(mdsvexConfig), vitePreprocess(), importAssets()],
+	vitePlugin: {
+		inspector: true
+	}
 };
 
 export default config;
