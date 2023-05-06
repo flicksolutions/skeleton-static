@@ -1,4 +1,6 @@
 <script>
+	import { createWsrvSrc } from '$lib/functions';
+
 	export let logos;
 	export let content;
 	export let br;
@@ -9,7 +11,7 @@
 		<div class="info">{@html content[br]}</div>
 		<div class="logos">
 			{#each logos[br] as logo}
-				<img src={logo.src} alt={logo.alt} />
+				<img src={createWsrvSrc(logo.src)} alt={logo.alt} />
 			{/each}
 		</div>
 	{/if}

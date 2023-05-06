@@ -57,8 +57,8 @@ Ich bin der Big-Boss in unserer kleinen Herde und zeige immer ganz deutlich, wen
 Ich verbrachte die ersten acht Jahre meines Lebens im wunderschönen Naturpark Thal und bin erst seit kurzem in Bleienbach. Ich muss mich noch etwas eingewöhnen, aber dank meiner ausgeprägten Neugier habe ich schon viel entdeckt.
 Ich liebe es, mit meiner Schnauze alles ganz genau zu untersuchen und nichts ist vor mir sicher.
 
-![Ada](../assets/ada.jpg?webp) und ich bin der Co-Co-Coach und behalte immer den Überblick.
+![Ada](../assets/ada.jpg) und ich bin der Co-Co-Coach und behalte immer den Überblick.
 
-![Pferd und Mensch gehen im Gleichschritt](../assets/IMG_5747.jpg?webp)
+![Pferd und Mensch gehen im Gleichschritt](../assets/IMG_5747.jpg)
 
 > Auch der längste Weg beginnt mit dem ersten Schritt. (chinesisches Sprichwort)
