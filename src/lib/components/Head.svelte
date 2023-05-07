@@ -38,7 +38,7 @@
 		background-color: var(--bg-color);
 		position: sticky;
 		top: 0;
-		z-index: 1000;
+		z-index: 100;
 		box-shadow: 0 0 10px var(--shadow-color);
 		height: 8rem;
 		transition: height 0.3s ease-in-out;

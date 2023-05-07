@@ -24,9 +24,12 @@
 			target: carouselContainer
 		});
 		const items = srcs.map((src) => ({
-			thumb: createWsrvSrc(src, { h: 300 }),
-			img: createWsrvSrcSet(src),
-			alt: alts[srcs.indexOf(src)]
+			thumb: createWsrvSrc(src, { h: 300, w: 534, fit: 'contain' }),
+			img: createWsrvSrc(src, { h: 1080, w: 1920, fit: 'contain' }),
+			//img: createWsrvSrcSet(src),
+			alt: alts[srcs.indexOf(src)],
+			w: 1920,
+			h: 1080
 		}));
 		bp.open({
 			items,
