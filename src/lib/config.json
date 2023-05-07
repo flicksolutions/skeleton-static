@@ -38,16 +38,12 @@
 		"sm": {
 			"logos": [
 				{
-					"src": "../assets/SVPC-Mitgliedsbutton.png",
+					"src": "/SVPC-Mitgliedsbutton.png",
 					"alt": "Mitglied SVPC"
 				},
 				{
-					"src": "https://placehold.it/100x100",
-					"alt": "Logo 2"
-				},
-				{
-					"src": "https://placehold.it/100x100",
-					"alt": "Logo 3"
+					"src": "/Zertifizierungsbutton_integtralhorse.png",
+					"alt": "Zertifiert Integral Horse"
 				}
 			],
 			"content": "<a href=\"#Kontakt\">Kontakt</a>"

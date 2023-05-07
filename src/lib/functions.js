@@ -1,5 +1,5 @@
-import { breakpoints } from '$lib/config.json';
-import { ghuser, ghrepo, ghbranch } from '$lib/config';
+import config from './config.json' assert { type: 'json' };
+const { breakpoints, ghuser, ghrepo, ghbranch } = config;
 
 /**
  * Creates an object with the same keys as the breakpoints object, and the values of the given attribute of the given object.
@@ -27,7 +27,7 @@ export function createWsrvSrc(src, options = {}) {
 	return `https://wsrv.nl/?url=${githubUrl}&${params}`;
 }
 
-export function createWsrvSrcSet(src, sizes = [300, 900, 1500, 2100, 3000]) {
+export function createWsrvSrcSet(src, sizes = [300, 600, 900, 1500, 2100, 3000]) {
 	return sizes
 		.map((size) => `${createWsrvSrc(src, { w: size, fit: 'contain' })} ${size}w`)
 		.join(', ');
