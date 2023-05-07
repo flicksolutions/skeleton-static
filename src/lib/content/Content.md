@@ -16,16 +16,16 @@ Ziel ist immer, den Coachee auf seinem Weg zur Selbstreflexion und im Finden von
 Das pferdegestützte Coaching findet vom Boden aus statt. Das heisst, es wird nicht geritten, sondern alle Übungen werden mit dem Pferd an der Hand absolviert.
 
 <Gallery>
-![Alt text](../assets/20221013_105234.jpg)
-![Alt text](../assets/IMG_5762.jpg)
-![Alt text](../assets/PXL_20221231_135513544.MP.jpg)
-![Alt text](../assets/PXL_20221231_135633716.jpg)
-![Alt text](../assets/PXL_20221231_135731446.MP.jpg)
-![Alt text](../assets/PXL_20221231_135927111.jpg)
-![Alt text](../assets/PXL_20221231_140121518.jpg)
-![Alt text](../assets/PXL_20221231_140624249.jpg)
-![Alt text](../assets/PXL_20221231_140650354.MP.jpg)
-![Alt text](../assets/PXL_20221231_140311265.jpg)
+![Alt text](/20221013_105234.jpg)
+![Alt text](/IMG_5762.jpg)
+![Alt text](/PXL_20221231_135513544.MP.jpg)
+![Alt text](/PXL_20221231_135633716.jpg)
+![Alt text](/PXL_20221231_135731446.MP.jpg)
+![Alt text](/PXL_20221231_135927111.jpg)
+![Alt text](/PXL_20221231_140121518.jpg)
+![Alt text](/PXL_20221231_140624249.jpg)
+![Alt text](/PXL_20221231_140650354.MP.jpg)
+![Alt text](/PXL_20221231_140311265.jpg)
 </Gallery>
 
 ## Bei welchen Themen ist ein pferdegestütztes Coaching hilfreich?
@@ -43,22 +43,22 @@ Die Dauer eines Coachings variiert zwischen 90 bis 120 Minuten.
 
 ## Wer wir sind
 
-![Rosmarie Locher](../assets/_20200404_155109.jpg) Rosmarie Locher
+![Rosmarie Locher](/_20200404_155109.jpg) Rosmarie Locher
 Seit mehr als 30 Jahren arbeite ich mit Menschen zusammen. Zuerst in meinem angestammten Beruf als Pflegefachfrau und nun schon seit vielen Jahren in meiner Praxis als Med. Masseurin.
 Immer wieder stiess ich auf Grenzen und dachte: da möchte ich mehr tun, diesem Menschen möchte ich gerne noch andere Möglichkeiten zur Selbsthilfe anbieten.
 Und immer hatte ich dabei Pferde im Kopf.
 Mit der Ausbildung zum INTEGRALHORSE® Familiencoach konnte ich diesen Wunsch nun endlich umsetzten.
 
-![Duana](../assets/20201111_111555.jpg) Duana 20201111_111555.jpg
+![Duana](/20201111_111555.jpg) Duana 20201111_111555.jpg
 Ich bin 12 Jahre alt und lebe schon einige Jahre hier in Bleienbach.
 Ich bin der Big-Boss in unserer kleinen Herde und zeige immer ganz deutlich, wenn mir etwas nicht passt. Sonst bin ich eher zurückhaltend – eine Dame eben – achte auf gutes Benehmen und lasse mich auch gerne mal bitten.
 
-![Latifa](../assets/20221013_103340.jpg) Latifa 20221013_103340.jpg
+![Latifa](/20221013_103340.jpg) Latifa 20221013_103340.jpg
 Ich verbrachte die ersten acht Jahre meines Lebens im wunderschönen Naturpark Thal und bin erst seit kurzem in Bleienbach. Ich muss mich noch etwas eingewöhnen, aber dank meiner ausgeprägten Neugier habe ich schon viel entdeckt.
 Ich liebe es, mit meiner Schnauze alles ganz genau zu untersuchen und nichts ist vor mir sicher.
 
-![Ada](../assets/ada.jpg) und ich bin der Co-Co-Coach und behalte immer den Überblick.
+![Ada](/ada.jpg) und ich bin der Co-Co-Coach und behalte immer den Überblick.
 
-![Pferd und Mensch gehen im Gleichschritt](../assets/IMG_5747.jpg)
+![Pferd und Mensch gehen im Gleichschritt](/IMG_5747.jpg)
 
 > Auch der längste Weg beginnt mit dem ersten Schritt. (chinesisches Sprichwort)

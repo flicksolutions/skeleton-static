@@ -1,6 +1,7 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import abbr from 'remark-abbr';
 import slug from 'rehype-slug';
+import { createWsrvSrcSet } from './src/lib/functions.js';
 // import autolink from 'rehype-autolink-headings';
 
 function headings() {
@@ -35,7 +36,7 @@ function addImgAsProps() {
 		}
 		visit(tree, 'html', (node) => {
 			if (node.value.includes('<Gallery')) {
-				const regexp = /(?<=\]\(\.\.\/assets\/)(.+?)(?=\))/g;
+				const regexp = /(?<=\]\()(.+?)(?=\))/g;
 				let srcs = node.value.match(regexp);
 				const alts = node.value.match(/(?<=!\[)(.+?)(?=\]\()/g);
 				if (!srcs) return;
@@ -65,6 +66,11 @@ function autolinkImages() {
 						class: 'lightbox'
 					},
 					children: [node]
+				};
+				node.properties = {
+					srcset: createWsrvSrcSet(node.properties.src),
+					sizes: '(min-width: 600px) 800px, 96vw', //TODO: set sizes
+					...node.properties
 				};
 				parent.children[index] = linkNode;
 			}
