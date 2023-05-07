@@ -1,3 +1,6 @@
+@use 'sass:map';
+@import 'variables';
+
 @font-face {
 	font-family: 'Open Sans';
 	src: url('/fonts/OpenSans_wdth,wght.woff2') format('woff2');
@@ -23,7 +26,25 @@ body {
 	--shadow-color: #8d8787;
 	--global-padding: 0.8rem;
 	--padding-sm: 0.4rem;
-	--small-height: 3rem;
+	--small-height: 2.5rem;
+}
+
+@media (min-width: map.get($breakpoints, 'md')) {
+	body {
+		--global-padding: 1.5rem;
+	}
+}
+
+@media (min-width: map.get($breakpoints, 'lg')) {
+	body {
+		--global-padding: 2.2rem;
+	}
+}
+
+@media (min-width: map.get($breakpoints, 'xl')) {
+	body {
+		--global-padding: 6rem;
+	}
 }
 
 h1,
@@ -45,8 +66,16 @@ img {
 		object-position: center;
 	}
 }*/
-.bp-wrap > div:first-child {
-	background-color: var(--bg-color);
+.bp-wrap {
+	z-index: initial;
+
+	.hide-controls {
+		z-index: 999;
+	}
+
+	& > div:first-child {
+		background-color: var(--bg-color);
+	}
 }
 
 .bp-count {

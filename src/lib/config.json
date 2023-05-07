@@ -49,7 +49,13 @@
 			"content": "<a href=\"#Kontakt\">Kontakt</a>"
 		},
 		"md": {
-			"content": "Rosmarie Locher | Dorfstrasse 5 3368 Bleienbach | 076 304 16 90 | <a href:\"mailto:rosmarie@molano.ch\">rosmarie@molano.ch</a>"
+			"content": "<a href=\"#Kontakt\">Kontakt</a>"
+		},
+		"lg": {
+			"content": "Rosmarie Locher | 076 304 16 90 | <a href:\"mailto:rosmarie@molano.ch\">rosmarie@molano.ch</a>"
+		},
+		"xl": {
+			"content": "Rosmarie Locher | 3368 Bleienbach | 076 304 16 90 | <a href:\"mailto:rosmarie@molano.ch\">rosmarie@molano.ch</a>"
 		}
 	}
 }

@@ -34,7 +34,7 @@
 		grid-template-columns: 1fr 2fr 1fr;
 		grid-template-rows: 8rem;
 		align-items: center;
-		padding: var(--global-padding);
+		padding: 0.8rem var(--global-padding);
 		background-color: var(--bg-color);
 		position: sticky;
 		top: 0;

@@ -18,12 +18,15 @@
 </footer>
 
 <style lang="scss">
+	@use 'sass:map';
+	@import 'src/lib/styles/variables.scss';
+
 	footer {
 		display: flex;
 		position: sticky;
 		bottom: 0;
 		justify-content: space-between;
-		padding: var(--global-padding);
+		padding: 0.8rem var(--global-padding);
 		background-color: var(--bg-color);
 		color: var(--text-color);
 		height: var(--small-height);
@@ -39,8 +42,15 @@
 		font-weight: 800;
 		text-align: left;
 		align-self: end;
+		flex-shrink: 0;
 		:global(a) {
 			color: var(--title-color);
+		}
+	}
+
+	@media (min-width: map.get($breakpoints, 'md')) {
+		.info {
+			font-size: 1.5rem;
 		}
 	}
 
@@ -50,7 +60,7 @@
 			height: 100%;
 			min-height: 0;
 			&:not(:first-child) {
-				margin-right: var(--global-padding);
+				margin-right: 0.8rem;
 			}
 		}
 	}
