@@ -22,7 +22,9 @@ export function createWsrvSrc(src, options = {}) {
 		...options
 	});
 	if (src.startsWith('/src/lib/assets/')) src = src.slice(16);
-	const githubUrl = `https://raw.githubusercontent.com/${ghuser}/${ghrepo}/${ghbranch}/src/lib/assets/${src}`;
+	if (src.startsWith('/src/routes/')) src = src.slice(12);
+	if (src.startsWith('/')) src = src.slice(1);
+	const githubUrl = `https://raw.githubusercontent.com/${ghuser}/${ghrepo}/${ghbranch}/static/${src}`;
 
 	return `https://wsrv.nl/?url=${githubUrl}&${params}`;
 }
