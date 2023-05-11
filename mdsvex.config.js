@@ -63,7 +63,8 @@ function autolinkImages() {
 					properties: {
 						href: node.properties.src,
 						target: '_self',
-						class: 'lightbox'
+						class: 'lightbox',
+						'data-sveltekit-preload-data': 'off'
 					},
 					children: [node]
 				};

@@ -3,6 +3,7 @@
 	import Content from '$lib/content/Content.md';
 	import { onMount } from 'svelte';
 	import { createWsrvSrc } from '$lib/functions';
+	import { fix_position } from 'svelte/internal';
 
 	let bp;
 
@@ -21,12 +22,18 @@
 
 	function openGallery(e) {
 		e.preventDefault();
-		console.log(e);
 		bp.open({
 			el: e.target,
 			items: [
 				{
-					img: createWsrvSrc(e.target.attributes.src.value, { w: 9000, we: 'true' })
+					img: createWsrvSrc(e.target.attributes.src.value, {
+						w: 1920,
+						h: 1080,
+						fit: 'contain'
+					}),
+					thumb: e.target.attributes.src.value,
+					width: 1920,
+					height: 1080
 				}
 			]
 		});
