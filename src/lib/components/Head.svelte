@@ -29,6 +29,8 @@
 </header>
 
 <style lang="scss">
+	@use 'sass:map';
+	@import 'src/lib/styles/variables.scss';
 	header {
 		display: grid;
 		grid-template-columns: 1fr 2fr 1fr;
@@ -61,6 +63,16 @@
 			&.open {
 				height: 21rem;
 				grid-template-rows: var(--small-height) 18rem;
+			}
+		}
+	}
+	@media (min-width: map.get($breakpoints, 'md')) {
+		header {
+			grid-template-rows: 8rem 3rem;
+			height: calc(8rem + 3rem);
+			&.small {
+				height: calc(var(--small-height) + 3rem);
+				grid-template-rows: var(--small-height) 3rem;
 			}
 		}
 	}

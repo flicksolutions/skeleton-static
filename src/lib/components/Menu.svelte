@@ -26,7 +26,6 @@
 {#if br === 'sm'}
 	<Burger {open} on:menuClick />
 {/if}
-
 {#if defer || br !== 'sm'}
 	<ul class:open>
 		{#each menuItems as section}
@@ -38,6 +37,8 @@
 {/if}
 
 <style lang="scss">
+	@use 'sass:map';
+	@import 'src/lib/styles/variables.scss';
 	ul {
 		grid-column: 1/-1;
 		display: flex;
@@ -63,6 +64,15 @@
 			font-weight: 500;
 			border-top: solid 2px var(--shadow-color);
 			padding: 0 var(--global-padding);
+		}
+	}
+
+	@media (min-width: map.get($breakpoints, 'md')) {
+		ul {
+			opacity: 1;
+			grid-row: 2;
+			grid-column: 1 / -1;
+			flex-flow: row nowrap;
 		}
 	}
 </style>
