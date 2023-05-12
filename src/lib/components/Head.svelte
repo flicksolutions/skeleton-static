@@ -7,20 +7,32 @@
 	export let menuData;
 	export let br;
 
-	const [major, minor] = title.split(' - ');
+	let major, minor;
+
+	if (title.includes(' - ')) {
+		[major, minor] = title.split(' - ');
+	} else {
+		major = title;
+		minor = '';
+	}
 
 	let scrollY = 0;
-	let open = false;
-	let small = false;
 	let oldscroll = 0;
+	let open,
+		small,
+		blocked = false;
 
 	$: {
-		if (scrollY > oldscroll) {
-			small = true;
-		} else {
-			small = false;
+		if (!blocked) {
+			if (scrollY > oldscroll && !small) {
+				small = true;
+				blocked = true;
+			} else if (scrollY < oldscroll && small) {
+				small = false;
+				blocked = true;
+			}
+			oldscroll = scrollY;
 		}
-		oldscroll = scrollY;
 	}
 
 	onMount(() => {
@@ -30,12 +42,19 @@
 
 <svelte:window bind:scrollY />
 
-<header class:small class:open>
+<header
+	class:small
+	class:open
+	on:transitionend={() => {
+		oldscroll = scrollY;
+		blocked = false;
+	}}
+>
 	<img src={logo} alt="Logo" />
 	<h1>
 		{#if br != 'sm'}
 			{title}
-		{:else if scrollY <= 100}
+		{:else if !small}
 			{major} {minor}
 		{:else}
 			{major}
