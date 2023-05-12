@@ -1,5 +1,8 @@
 <script>
 	import Burger from '$lib/components/Burger.svelte';
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
 
 	export let br = 'sm';
 	export let data;
@@ -30,7 +33,7 @@
 	<ul class:open>
 		{#each menuItems as section}
 			<li>
-				<a href="#{section.href}">{section.title}</a>
+				<a href="#{section.href}" on:click={() => dispatch('menuClick')}>{section.title}</a>
 			</li>
 		{/each}
 	</ul>

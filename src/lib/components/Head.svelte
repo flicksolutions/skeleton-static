@@ -1,6 +1,7 @@
 <script>
 	import logo from '$lib/assets/logo.svg';
 	import Menu from '$lib/components/Menu.svelte';
+	import { onMount } from 'svelte';
 
 	export let title;
 	export let menuData;
@@ -10,11 +11,26 @@
 
 	let scrollY = 0;
 	let open = false;
+	let small = false;
+	let oldscroll = 0;
+
+	$: {
+		if (scrollY > oldscroll) {
+			small = true;
+		} else {
+			small = false;
+		}
+		oldscroll = scrollY;
+	}
+
+	onMount(() => {
+		oldscroll = scrollY;
+	});
 </script>
 
 <svelte:window bind:scrollY />
 
-<header class:small={scrollY > 100} class:open>
+<header class:small class:open>
 	<img src={logo} alt="Logo" />
 	<h1>
 		{#if br != 'sm'}
@@ -34,7 +50,7 @@
 	header {
 		display: grid;
 		grid-template-columns: 1fr 2fr 1fr;
-		grid-template-rows: 8rem;
+		grid-template-rows: var(--header-height);
 		align-items: center;
 		padding: 0.8rem var(--global-padding);
 		background-color: var(--bg-color);
@@ -47,7 +63,7 @@
 
 		&.open {
 			height: 26rem;
-			grid-template-rows: 8rem 18rem;
+			grid-template-rows: var(--header-height) 18rem;
 		}
 
 		* {
@@ -69,11 +85,13 @@
 	@media (min-width: map.get($breakpoints, 'md')) {
 		header {
 			grid-template-columns: auto 3fr;
-			grid-template-rows: 8rem calc(var(--padding-md) + 2rem);
-			height: calc(8rem + var(--padding-md) + 2rem);
+			grid-template-rows: var(--header-height) calc(var(--padding-md) + var(--menu-height));
+			height: calc(var(--header-height) + var(--padding-md) + var(--menu-height));
 			&.small {
-				height: calc(var(--small-header-height) + var(--small-header-padding) + 2rem);
-				grid-template-rows: var(--small-header-height) calc(var(--small-header-padding) + 2rem);
+				height: calc(var(--small-header-height) + var(--small-header-padding) + var(--menu-height));
+				grid-template-rows: var(--small-header-height) calc(
+						var(--small-header-padding) + var(--menu-height)
+					);
 				img {
 					width: var(--small-header-height);
 				}
@@ -82,7 +100,7 @@
 
 		img {
 			height: 100%;
-			width: 8rem;
+			width: var(--header-height);
 		}
 	}
 	h1 {

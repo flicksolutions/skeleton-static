@@ -16,10 +16,7 @@
 	font-style: normal;
 }
 
-body {
-	font-family: 'Open Sans', sans-serif;
-	margin: 0;
-	padding: 0;
+html {
 	--bg-color: #eee7ec;
 	--title-color: #597e99;
 	--text-color: black;
@@ -28,7 +25,17 @@ body {
 	--padding-sm: 0.4rem;
 	--padding-md: 1rem;
 	--small-header-height: 2.5rem;
+	--header-height: 8rem;
+	--menu-height: 2rem;
 	--small-header-padding: 0.8rem;
+	scroll-padding-block: 10rem;
+	overflow: auto;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 @media (min-width: map.get($breakpoints, 'md')) {
