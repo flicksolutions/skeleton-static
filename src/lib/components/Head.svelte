@@ -55,24 +55,24 @@
 		}
 
 		&.small {
-			height: var(--small-height);
-			grid-template-rows: var(--small-height);
+			height: var(--small-header-height);
+			grid-template-rows: var(--small-header-height);
 			h1 {
 				width: initial;
 			}
 			&.open {
 				height: 21rem;
-				grid-template-rows: var(--small-height) 18rem;
+				grid-template-rows: var(--small-header-height) 18rem;
 			}
 		}
 	}
 	@media (min-width: map.get($breakpoints, 'md')) {
 		header {
-			grid-template-rows: 8rem 3rem;
-			height: calc(8rem + 3rem);
+			grid-template-rows: 8rem calc(var(--padding-md) + 2rem);
+			height: calc(8rem + var(--padding-md) + 2rem);
 			&.small {
-				height: calc(var(--small-height) + 3rem);
-				grid-template-rows: var(--small-height) 3rem;
+				height: calc(var(--small-header-height) + var(--small-header-padding) + 2rem);
+				grid-template-rows: var(--small-header-height) calc(var(--small-header-padding) + 2rem);
 			}
 		}
 	}

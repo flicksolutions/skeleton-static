@@ -68,11 +68,25 @@
 	}
 
 	@media (min-width: map.get($breakpoints, 'md')) {
+		:global(.small) ul {
+			margin-top: 0.8rem;
+		}
+
 		ul {
+			border-top: solid 2px var(--shadow-color);
+			height: 100%;
 			opacity: 1;
 			grid-row: 2;
 			grid-column: 1 / -1;
 			flex-flow: row nowrap;
+			justify-content: space-between;
+			padding: 0 var(--global-padding);
+			margin-top: var(--padding-md);
+
+			li {
+				border: none;
+				padding: 0;
+			}
 		}
 	}
 </style>

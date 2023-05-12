@@ -26,7 +26,9 @@ body {
 	--shadow-color: #8d8787;
 	--global-padding: 0.8rem;
 	--padding-sm: 0.4rem;
-	--small-height: 2.5rem;
+	--padding-md: 1rem;
+	--small-header-height: 2.5rem;
+	--small-header-padding: 0.8rem;
 }
 
 @media (min-width: map.get($breakpoints, 'md')) {

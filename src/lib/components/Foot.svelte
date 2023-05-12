@@ -29,7 +29,7 @@
 		padding: 0.8rem var(--global-padding);
 		background-color: var(--bg-color);
 		color: var(--text-color);
-		height: var(--small-height);
+		height: var(--small-header-height);
 		box-shadow: 0px -5px 4px rgba(0, 0, 0, 0.25);
 		* {
 			min-height: 0;
