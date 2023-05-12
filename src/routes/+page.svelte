@@ -31,9 +31,13 @@
 						h: 1080,
 						fit: 'contain'
 					}),
-					thumb: e.target.attributes.src.value,
-					width: 1920,
-					height: 1080
+					thumb: createWsrvSrc(e.target.attributes.src.value, {
+						w: 192,
+						h: 108,
+						fit: 'contain'
+					}),
+					w: 1920,
+					h: 1080
 				}
 			]
 		});
