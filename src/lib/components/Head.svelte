@@ -68,12 +68,21 @@
 	}
 	@media (min-width: map.get($breakpoints, 'md')) {
 		header {
+			grid-template-columns: auto 3fr;
 			grid-template-rows: 8rem calc(var(--padding-md) + 2rem);
 			height: calc(8rem + var(--padding-md) + 2rem);
 			&.small {
 				height: calc(var(--small-header-height) + var(--small-header-padding) + 2rem);
 				grid-template-rows: var(--small-header-height) calc(var(--small-header-padding) + 2rem);
+				img {
+					width: var(--small-header-height);
+				}
 			}
+		}
+
+		img {
+			height: 100%;
+			width: 8rem;
 		}
 	}
 	h1 {
