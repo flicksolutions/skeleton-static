@@ -2,6 +2,8 @@ import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import abbr from 'remark-abbr';
 import slug from 'rehype-slug';
 import { createWsrvSrcSet } from './src/lib/functions.js';
+/*import config from './config.json' assert { type: 'json' };
+const { breakpoints } = config;*/
 // import autolink from 'rehype-autolink-headings';
 
 function headings() {
@@ -49,7 +51,7 @@ function addImgAsProps() {
 }
 
 // rehype Plugin to wrap images in a link to the image itself
-function autolinkImages() {
+/*function autolinkImages() {
 	let visit;
 	return async function transformer(tree) {
 		if (!visit) {
@@ -70,14 +72,14 @@ function autolinkImages() {
 				};
 				node.properties = {
 					srcset: createWsrvSrcSet(node.properties.src),
-					sizes: '(min-width: 600px) 800px, 96vw', //TODO: set sizes
+					sizes: `(min-width: ${breakpoints.lg}) 800px, 96vw`, //TODO: set sizes
 					...node.properties
 				};
 				parent.children[index] = linkNode;
 			}
 		});
 	};
-}
+}*/
 
 /*function removePTagsFromImages() {
 	return function (tree) {
@@ -92,14 +94,18 @@ function autolinkImages() {
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
 
+	layout: {
+		_: './src/lib/components/mdsvex.svelte'
+	},
+
 	smartypants: {
 		dashes: 'oldschool'
 	},
 
 	remarkPlugins: [abbr, headings, addImgAsProps],
 	rehypePlugins: [
-		slug,
-		autolinkImages
+		slug
+		//autolinkImages
 		//[ autolink, { behavior: 'wrap' } ],
 		//removePTagsFromImages
 	]

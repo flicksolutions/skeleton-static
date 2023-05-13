@@ -3,7 +3,6 @@
 	import Content from '$lib/content/Content.md';
 	import { onMount } from 'svelte';
 	import { createWsrvSrc } from '$lib/functions';
-	import { fix_position } from 'svelte/internal';
 
 	let bp;
 

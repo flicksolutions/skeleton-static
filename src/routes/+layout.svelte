@@ -38,7 +38,7 @@
 
 <style lang="scss">
 	main {
-		padding: var(--global-padding);
+		padding: 0 var(--global-padding);
 
 		:global(.carousel-container) {
 			margin: 0 calc(-1 * var(--global-padding));
