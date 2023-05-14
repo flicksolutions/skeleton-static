@@ -24,7 +24,9 @@ export function createWsrvSrc(src, options = {}) {
 	if (src.startsWith('/src/lib/assets/')) src = src.slice(16);
 	if (src.startsWith('/src/routes/')) src = src.slice(12);
 	if (src.startsWith('/')) src = src.slice(1);
-	const githubUrl = `https://raw.githubusercontent.com/${ghuser}/${ghrepo}/${ghbranch}/static/${src}`;
+	const githubUrl = `https://raw.githubusercontent.com/${ghuser}/${ghrepo}/${ghbranch}/static/${
+		src.split('#')[0]
+	}`;
 
 	return `https://wsrv.nl/?url=${githubUrl}&${params}`;
 }

@@ -105,6 +105,6 @@ und ich bin der Co-Co-Coach und behalte immer den Überblick.
 
 </Columns>
 
-![Pferd und Mensch gehen im Gleichschritt](/IMG_5747.jpg#fullscreen)
+![Pferd und Mensch gehen im Gleichschritt](/IMG_5747.jpg#size=95vw)
 
 > Auch der längste Weg beginnt mit dem ersten Schritt. (chinesisches Sprichwort)
