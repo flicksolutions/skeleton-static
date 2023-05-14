@@ -10,28 +10,22 @@
 	@import 'src/lib/styles/variables.scss';
 
 	.columns {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
+		display: grid;
+		justify-content: start;
 		gap: var(--padding-sm);
-
-		/*:global(img) {
-            max-width: 100%;
-		}*/
 	}
 
 	@media (min-width: map.get($breakpoints, 'md')) {
 		.columns {
-			flex-flow: row nowrap;
+			grid-template-columns: repeat(auto-fit, minmax(30vw, auto));
 			gap: var(--padding-md);
 
-			> :global(*) {
-				// flex: 1 0 30vw;
+			> :global(p) {
+				flex-grow: 1;
 			}
 
-			:global(img) {
-				min-width: 30vw;
-				width: 30vw;
+			> :global(*) {
+				flex-basis: content;
 			}
 		}
 	}
@@ -39,19 +33,12 @@
 	@media (min-width: map.get($breakpoints, 'lg')) {
 		.columns {
 			gap: var(--padding-lg);
-
-			> :global(*) {
-				//flex: 1 0 40vw;
-			}
 		}
 	}
 
 	@media (min-width: map.get($breakpoints, 'xl')) {
 		.columns {
-			> :global(*) {
-				//flex: 1 1 40vw;
-				flex-grow: 1;
-			}
+			gap: var(--padding-xl);
 		}
 	}
 </style>
