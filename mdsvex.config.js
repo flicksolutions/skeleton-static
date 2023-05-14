@@ -1,10 +1,8 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import abbr from 'remark-abbr';
 import slug from 'rehype-slug';
-import { createWsrvSrcSet } from './src/lib/functions.js';
-/*import config from './config.json' assert { type: 'json' };
-const { breakpoints } = config;*/
-// import autolink from 'rehype-autolink-headings';
+import autolink from 'rehype-autolink-headings';
+import unwrap from 'remark-unwrap-images';
 
 function headings() {
 	let visit;
@@ -102,11 +100,12 @@ const config = defineConfig({
 		dashes: 'oldschool'
 	},
 
-	remarkPlugins: [abbr, headings, addImgAsProps],
+	remarkPlugins: [abbr, headings, addImgAsProps, unwrap],
 	rehypePlugins: [
-		slug
-		//autolinkImages
-		//[ autolink, { behavior: 'wrap' } ],
+		slug[
+			//autolinkImages
+			(autolink, { behavior: 'wrap' })
+		]
 		//removePTagsFromImages
 	]
 });
