@@ -48,11 +48,9 @@ Die Dauer eines Coachings variiert zwischen 90 bis 120 Minuten.
 
 <div class="hero">
 
-![Rosmarie Locher](/_20200404_155109.jpg#size=45vw)
-
-<div>
-
 ### Rosmarie Locher
+
+![Rosmarie Locher](/_20200404_155109.jpg#size=45vw)
 
 Seit mehr als 30 Jahren arbeite ich mit Menschen zusammen. Zuerst in meinem angestammten Beruf als Pflegefachfrau und nun schon seit vielen Jahren in meiner Praxis als Med. Masseurin.
 Immer wieder stiess ich auf Grenzen und dachte: da möchte ich mehr tun, diesem Menschen möchte ich gerne noch andere Möglichkeiten zur Selbsthilfe anbieten.
@@ -60,46 +58,33 @@ Und immer hatte ich dabei Pferde im Kopf.
 Mit der Ausbildung zum INTEGRALHORSE® Familiencoach konnte ich diesen Wunsch nun endlich umsetzten.
 
 </div>
-</div>
 <div class="hero">
 
-![Duana](/20201111_111555.jpg#size=45vw)
-
-<div>
-
 ### Duana
+
+![Duana](/20201111_111555.jpg#size=45vw)
 
 Ich bin 12 Jahre alt und lebe schon einige Jahre hier in Bleienbach.
 Ich bin der Big-Boss in unserer kleinen Herde und zeige immer ganz deutlich, wenn mir etwas nicht passt. Sonst bin ich eher zurückhaltend – eine Dame eben – achte auf gutes Benehmen und lasse mich auch gerne mal bitten.
 
 </div>
-</div>
 <div class="hero">
 
-![Latifa](/20221013_103340.jpg#size=45vw)
-
-<div>
-
 ### Latifa
+
+![Latifa](/20221013_103340.jpg#size=45vw)
 
 Ich verbrachte die ersten acht Jahre meines Lebens im wunderschönen Naturpark Thal und bin erst seit kurzem in Bleienbach. Ich muss mich noch etwas eingewöhnen, aber dank meiner ausgeprägten Neugier habe ich schon viel entdeckt.
 Ich liebe es, mit meiner Schnauze alles ganz genau zu untersuchen und nichts ist vor mir sicher.
 
 </div>
-</div>
 <div class="hero">
-
-![Ada](/ada.jpg#size=45vw)
-
-![deleteme](https://wsrv.nl/?url=wsrv.nl/lichtenstein.jpg&w=300)
-
-<div>
 
 ### Ada
 
+![Ada](/ada.jpg#size=45vw)
 und ich bin der Co-Co-Coach und behalte immer den Überblick.
 
-</div>
 </div>
 
 </Columns>
