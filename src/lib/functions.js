@@ -16,11 +16,17 @@ export function getAttrByBreakpoint(originalObject, attr) {
 }
 
 export function createWsrvSrc(src, options = {}) {
-	if (src.startsWith('http')) return src;
 	const params = new URLSearchParams({
 		output: 'webp',
 		...options
 	});
+	if (src.startsWith('https://wsrv.nl/')) {
+		const oldurl = new URL(src);
+		params.forEach((value, key) => oldurl.searchParams.set(key, value));
+		return oldurl.toString();
+	}
+
+	if (src.startsWith('http')) return src;
 	if (src.startsWith('/src/lib/assets/')) src = src.slice(16);
 	if (src.startsWith('/src/routes/')) src = src.slice(12);
 	if (src.startsWith('/')) src = src.slice(1);
@@ -31,8 +37,8 @@ export function createWsrvSrc(src, options = {}) {
 	return `https://wsrv.nl/?url=${githubUrl}&${params}`;
 }
 
-export function createWsrvSrcSet(src, sizes = [300, 600, 900, 1500, 2100, 3000]) {
+export function createWsrvSrcSet(src, sizes = [300, 600, 900, 1500, 2100, 3000], options = {}) {
 	return sizes
-		.map((size) => `${createWsrvSrc(src, { w: size, fit: 'contain' })} ${size}w`)
+		.map((size) => `${createWsrvSrc(src, { w: size, fit: 'contain', ...options })} ${size}w`)
 		.join(', ');
 }

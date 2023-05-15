@@ -46,7 +46,9 @@ Die Dauer eines Coachings variiert zwischen 90 bis 120 Minuten.
 
 <Columns>
 
-![Rosmarie Locher](/_20200404_155109.jpg)
+<div class="hero">
+
+![Rosmarie Locher](/_20200404_155109.jpg#size=45vw)
 
 <div>
 
@@ -58,12 +60,10 @@ Und immer hatte ich dabei Pferde im Kopf.
 Mit der Ausbildung zum INTEGRALHORSE® Familiencoach konnte ich diesen Wunsch nun endlich umsetzten.
 
 </div>
+</div>
+<div class="hero">
 
-</Columns>
-
-<Columns>
-
-![Duana](/20201111_111555.jpg)
+![Duana](/20201111_111555.jpg#size=45vw)
 
 <div>
 
@@ -73,12 +73,10 @@ Ich bin 12 Jahre alt und lebe schon einige Jahre hier in Bleienbach.
 Ich bin der Big-Boss in unserer kleinen Herde und zeige immer ganz deutlich, wenn mir etwas nicht passt. Sonst bin ich eher zurückhaltend – eine Dame eben – achte auf gutes Benehmen und lasse mich auch gerne mal bitten.
 
 </div>
+</div>
+<div class="hero">
 
-</Columns>
-
-<Columns>
-
-![Latifa](/20221013_103340.jpg)
+![Latifa](/20221013_103340.jpg#size=45vw)
 
 <div>
 
@@ -88,12 +86,12 @@ Ich verbrachte die ersten acht Jahre meines Lebens im wunderschönen Naturpark T
 Ich liebe es, mit meiner Schnauze alles ganz genau zu untersuchen und nichts ist vor mir sicher.
 
 </div>
+</div>
+<div class="hero">
 
-</Columns>
+![Ada](/ada.jpg#size=45vw)
 
-<Columns>
-
-![Ada](/ada.jpg)
+![deleteme](https://wsrv.nl/?url=wsrv.nl/lichtenstein.jpg&w=300)
 
 <div>
 
@@ -102,8 +100,10 @@ Ich liebe es, mit meiner Schnauze alles ganz genau zu untersuchen und nichts ist
 und ich bin der Co-Co-Coach und behalte immer den Überblick.
 
 </div>
+</div>
 
 </Columns>
+<div style="height: 12rem;"> </div>
 
 ![Pferd und Mensch gehen im Gleichschritt](/IMG_5747.jpg#size=95vw)
 
