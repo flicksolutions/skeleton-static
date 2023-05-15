@@ -11,34 +11,47 @@
 
 	.columns {
 		display: grid;
-		justify-content: start;
 		gap: var(--padding-sm);
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+		:global(.hero) {
+			container-type: inline-size;
+
+			:global(img):first-of-type {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	@container (width > 1px) {
+		:global(img):first-of-type {
+			height: 60cqw;
+			object-fit: cover;
+		}
 	}
 
 	@media (min-width: map.get($breakpoints, 'md')) {
 		.columns {
-			grid-template-columns: repeat(auto-fit, minmax(30vw, auto));
 			gap: var(--padding-md);
-
-			> :global(p) {
-				flex-grow: 1;
-			}
-
-			> :global(*) {
-				flex-basis: content;
-			}
+			/*:global(.hero img:first-of-type) {
+				height: 32vw;
+			}*/
 		}
 	}
 
 	@media (min-width: map.get($breakpoints, 'lg')) {
 		.columns {
 			gap: var(--padding-lg);
+			/*:global(.hero img:first-of-type) {
+				height: 25vw;
+			}*/
 		}
 	}
 
 	@media (min-width: map.get($breakpoints, 'xl')) {
 		.columns {
 			gap: var(--padding-xl);
+			//grid-template-columns: repeat(auto-fit, minmax(20%, auto));
 		}
 	}
 </style>

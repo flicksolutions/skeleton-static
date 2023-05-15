@@ -25,6 +25,7 @@ html {
 	--padding-sm: 0.4rem;
 	--padding-md: 1rem;
 	--padding-lg: 2.5rem;
+	--padding-xl: 4rem;
 	--small-header-height: 2.5rem;
 	--header-height: 8rem;
 	--menu-height: 2rem;
@@ -57,6 +58,12 @@ body {
 	}
 }
 
+@media (min-width: map.get($breakpoints, 'xxl')) {
+	body {
+		--global-padding: calc((100vw - 1200px) / 2);
+	}
+}
+
 h1,
 h2,
 h3 {
@@ -66,21 +73,10 @@ h3 {
 img {
 	max-width: 100%;
 }
-/*
-.bp-img {
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	img {
-		object-fit: contain;
-		object-position: center;
-	}
-}*/
-.bp-wrap {
-	z-index: initial;
 
-	.hide-controls {
-		z-index: 999;
+.bp-wrap {
+	&.bp-inline {
+		z-index: initial;
 	}
 
 	& > div:first-child {

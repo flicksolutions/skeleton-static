@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import { createWsrvSrc, createWsrvSrcSet } from '$lib/functions';
+	import { createWsrvSrc } from '$lib/functions';
 	import BiggerPicture from 'bigger-picture/svelte';
 
 	let bp;
@@ -81,15 +81,19 @@
 {/if}
 
 <style lang="scss">
+	@use 'sass:map';
+	@import 'src/lib/styles/variables.scss';
 	.carousel-container {
 		position: relative;
-		width: 100%;
+		width: 100vw;
 		height: 300px;
-
-		/*:global(img) {
-            max-width: 100%;
-            height: 200px;
-            object-fit: contain;
-        }*/
+		margin: 0 calc(-1 * var(--global-padding));
+	}
+	@media (min-width: map.get($breakpoints, 'xl')) {
+		.carousel-container {
+			width: 100%;
+			height: 400px;
+			margin: 0;
+		}
 	}
 </style>
