@@ -5,7 +5,7 @@
 
 	import { Map } from '@onsvisual/svelte-maps'; // for interface see https://github.com/ONSvisual/svelte-maps/blob/main/src/Map.svelte
 	import maplibre from 'maplibre-gl';
-	import { Marker } from 'maplibre-gl';
+	import { Marker, Popup } from 'maplibre-gl';
 
 	export let location;
 	export let adress = '',
@@ -15,7 +15,13 @@
 
 	onMount(() => {
 		map.addControl(new maplibre.NavigationControl(), 'top-left');
-		new Marker({ color: 'var(--title-color)' }).setLngLat(location).addTo(map);
+		const popup = new Popup({ offset: 25 })
+			.setLngLat(location)
+			.setHTML(
+				`<h3>${adress}</h3><p><a href="${link}" target="_blank" rel="noopener noreferrer">Wegbeschreibung (Google Maps)</a></p>`
+			);
+
+		new Marker({ color: 'var(--title-color)' }).setLngLat(location).setPopup(popup).addTo(map);
 	});
 </script>
 
