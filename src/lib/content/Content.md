@@ -2,6 +2,7 @@
     import Gallery from '$lib/components/Gallery.svelte';
     import Columns from '$lib/components/Columns.svelte';
     import ImgText from '$lib/components/ImgText.svelte';
+    import Mapbox from '$lib/components/Mapbox.svelte';
 </script>
 
 # MoLano - pferdegestütztes Coaching
@@ -97,7 +98,10 @@ und ich bin der Co-Co-Coach und behalte immer den Überblick.
 </div>
 
 </Columns>
-<div style="height: 12rem;"> </div>
+
+## Kontakt
+
+<Mapbox location={[7.756737443355724, 47.18519492606521]} adress="Dorfstrasse 5, 3368 Bleienbach" link="https://goo.gl/maps/2gJ85unQD5FNrMCz7"/>
 
 <ImgText>
 
