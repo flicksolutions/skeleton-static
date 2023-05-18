@@ -1,9 +1,18 @@
 <script>
     import Gallery from '$lib/components/Gallery.svelte';
     import Columns from '$lib/components/Columns.svelte';
+    import ImgText from '$lib/components/ImgText.svelte';
 </script>
 
 # MoLano - pferdegestütztes Coaching
+
+<ImgText>
+
+![Latifa blickt über ihre Schulter](/20221007_163501.jpg#size=95vw)
+
+<figcaption>In der Leichtigkeit darf Neues entstehen</figcaption>
+
+</ImgText>
 
 ## Was ist pferdegestütztes Coaching?
 
@@ -90,6 +99,14 @@ und ich bin der Co-Co-Coach und behalte immer den Überblick.
 </Columns>
 <div style="height: 12rem;"> </div>
 
+<ImgText>
+
 ![Pferd und Mensch gehen im Gleichschritt](/IMG_5747.jpg#size=95vw)
 
-> Auch der längste Weg beginnt mit dem ersten Schritt. (chinesisches Sprichwort)
+<figcaption>
+
+Auch der längste Weg beginnt mit dem ersten Schritt.
+
+</figcaption>
+
+</ImgText>
