@@ -7,37 +7,28 @@
 	import '$lib/styles/style.scss';
 	import Head from '$lib/components/Head.svelte';
 	import Foot from '$lib/components/Foot.svelte';
-	import { breakpoints } from '$lib/config.json';
-	import { onMount } from 'svelte';
+	import { setBr } from '$lib/functions.js';
 
-	let windowWidth = 0;
-	let br;
-
-	const setBr = () => {
-		for (const [breakpoint, width] of Object.entries(breakpoints)) {
-			if (windowWidth >= width) {
-				br = breakpoint;
-			} else {
-				break; // Stop iterating when the first breakpoint that doesn't match is found
-			}
-		}
-	};
-
-	onMount(() => {
-		setBr();
-	});
+	let windowWidth;
+	$: br = setBr(windowWidth);
 </script>
 
-<svelte:window on:resize={setBr} bind:innerWidth={windowWidth} />
-
-<Head {title} menuData={menuContent} {br} />
-<main>
-	<slot />
-</main>
-<Foot {logos} content={footerContent} {br} />
+<svelte:window bind:innerWidth={windowWidth} />
+{#if br}
+	<Head {title} menuData={menuContent} {br} />
+	<main>
+		<slot />
+	</main>
+	<Foot {logos} content={footerContent} {br} />
+{/if}
 
 <style lang="scss">
 	main {
 		padding: 0 var(--global-padding);
+
+		:global(*):first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
 	}
 </style>

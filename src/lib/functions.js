@@ -15,6 +15,19 @@ export function getAttrByBreakpoint(originalObject, attr) {
 	return modifiedObject;
 }
 
+export function setBr(inputWidth) {
+	if (!inputWidth) return undefined;
+	let br = Object.keys(breakpoints)[0];
+	for (const [breakpoint, width] of Object.entries(breakpoints)) {
+		if (inputWidth >= width) {
+			br = breakpoint;
+		} else {
+			break; // Stop iterating when the first breakpoint that doesn't match is found
+		}
+	}
+	return br;
+}
+
 export function createWsrvSrc(src, options = {}) {
 	const params = new URLSearchParams({
 		output: 'webp',

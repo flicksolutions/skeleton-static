@@ -68,7 +68,7 @@
 	@import 'src/lib/styles/variables.scss';
 	header {
 		display: grid;
-		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-columns: 1fr 2fr auto;
 		grid-template-rows: var(--header-height);
 		align-items: center;
 		padding: 0.8rem var(--global-padding);
@@ -80,6 +80,18 @@
 		height: 8rem;
 		transition: height 0.3s ease-in-out;
 
+		h1 {
+			font-size: 1.5rem;
+			font-weight: 800;
+			justify-self: center;
+			color: var(--title-color);
+			grid-row: 1;
+		}
+		img {
+			justify-self: start;
+			max-height: 100%;
+			grid-row: 1;
+		}
 		&.open {
 			height: 26rem;
 			grid-template-rows: var(--header-height) 18rem;
@@ -92,9 +104,6 @@
 		&.small {
 			height: var(--small-header-height);
 			grid-template-rows: var(--small-header-height);
-			h1 {
-				width: initial;
-			}
 			&.open {
 				height: 21rem;
 				grid-template-rows: var(--small-header-height) 18rem;
@@ -121,18 +130,5 @@
 			height: 100%;
 			width: var(--header-height);
 		}
-	}
-	h1 {
-		font-size: 1.5rem;
-		font-weight: 800;
-		justify-self: center;
-		width: 30vw;
-		color: var(--title-color);
-		grid-row: 1;
-	}
-	img {
-		justify-self: start;
-		max-height: 100%;
-		grid-row: 1;
 	}
 </style>
