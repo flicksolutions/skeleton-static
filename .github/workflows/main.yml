@@ -4,6 +4,9 @@ on:
     branches:
       - main
       - master
+      
+env:
+  PUBLIC_MAPTILER_TOKEN: ${{ vars.PUBLIC_MAPTILER_TOKEN }}
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: latest
-
+      - run: echo $PUBLIC_MAPTILER_TOKEN
       - run: npm install
       - run: npm run build
 
