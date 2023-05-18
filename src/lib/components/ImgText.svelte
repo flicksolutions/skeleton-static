@@ -80,6 +80,9 @@
 			height: auto;
 			object-fit: cover;
 			max-height: 30vw;
+			@media (min-width: map.get($breakpoints, 'lg')) {
+				max-height: 45vh;
+			}
 		}
 
 		:global(figcaption) {
