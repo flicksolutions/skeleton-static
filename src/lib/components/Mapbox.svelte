@@ -15,6 +15,7 @@
 
 	onMount(() => {
 		map.addControl(new maplibre.NavigationControl(), 'top-left');
+		map.scrollZoom.disable();
 		const popup = new Popup({ offset: 25 })
 			.setLngLat(location)
 			.setHTML(

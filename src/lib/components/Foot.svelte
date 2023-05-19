@@ -24,6 +24,7 @@
 	footer {
 		display: flex;
 		position: sticky;
+		z-index: 100;
 		bottom: 0;
 		justify-content: space-between;
 		padding: 0.8rem var(--global-padding);
