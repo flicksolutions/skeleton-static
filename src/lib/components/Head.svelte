@@ -19,20 +19,11 @@
 	let scrollY = 0;
 	let oldscroll = 0;
 	let open,
-		small,
-		blocked = false;
+		small = false;
 
-	$: {
-		if (!blocked) {
-			if (scrollY > oldscroll && !small) {
-				small = true;
-				blocked = true;
-			} else if (scrollY < oldscroll && small) {
-				small = false;
-				blocked = true;
-			}
-			oldscroll = scrollY;
-		}
+	function handleMenuClick() {
+		small = true;
+		if (br === 'sm') open = !open;
 	}
 
 	onMount(() => {
@@ -40,16 +31,30 @@
 	});
 </script>
 
-<svelte:window bind:scrollY />
-
-<header
-	class:small
-	class:open
-	on:transitionend={() => {
-		oldscroll = scrollY;
-		blocked = false;
+<svelte:window
+	bind:scrollY
+	on:wheel={(e) => {
+		if (e.deltaY > 15 && !small) {
+			small = true;
+		} else if (e.deltaY < -15 && small) {
+			small = false;
+		}
 	}}
->
+	on:touchmove={() => {
+		const deltaY = scrollY - oldscroll;
+		console.log(deltaY);
+		if (deltaY > 15 && !small) {
+			small = true;
+		} else if (deltaY < -15 && small) {
+			small = false;
+		}
+	}}
+	on:touchstart={() => {
+		oldscroll = scrollY;
+	}}
+/>
+
+<header class:small class:open>
 	<img src={logo} alt="Logo" />
 	<h1>
 		{#if br != 'sm'}
@@ -60,7 +65,7 @@
 			{major}
 		{/if}
 	</h1>
-	<Menu data={menuData} {br} {open} on:menuClick={() => (open = !open)} />
+	<Menu data={menuData} {br} {open} on:menuClick={handleMenuClick} />
 </header>
 
 <style lang="scss">
