@@ -17,7 +17,7 @@
 
 ## Was ist pferdegestütztes Coaching?
 
-Pferde sind Meister in der Non-Verbalen Kommunikation und können uns Menschen dadurch helfen, uns selber besser kennen und verstehen zu lernen. Ihre Fähigkeit, in Sekundenschnelle auf ihre Umgebung reagieren zu können, sichert seit jeher ihr Überleben und das Zusammenleben in der Herde. Gerade durch diese Fähigkeit sind sie hervorragende Beobachter und «lesen» uns wie ein offenes Buch. Sie spiegeln unsere Gefühle, zeigen uns schonungslos auf, wie es gerade um uns steht …. ob wir wollen oder nicht. Sie leben im Hier und Jetzt, sind absolut ehrlich, unbestechlich, bewerten uns nicht und sind immer wieder bereit, sich auf uns einzulassen.
+Pferde sind Meister in der nonverbalen Kommunikation und können uns Menschen dadurch helfen, uns selber besser kennen und verstehen zu lernen. Ihre Fähigkeit, in Sekundenschnelle auf ihre Umgebung reagieren zu können, sichert seit jeher ihr Überleben und das Zusammenleben in der Herde. Gerade durch diese Fähigkeit sind sie hervorragende Beobachter und «lesen» uns wie ein offenes Buch. Sie spiegeln unsere Gefühle, zeigen uns schonungslos auf, wie es gerade um uns steht… Ob wir wollen oder nicht. Sie leben im Hier und Jetzt, sind absolut ehrlich, unbestechlich, bewerten uns nicht und sind immer wieder bereit, sich auf uns einzulassen.
 Pferde bieten uns eine wundervolle Möglichkeit etwas über uns selbst zu lernen.
 
 ## Und wie geht das nun konkret?
@@ -37,16 +37,19 @@ Das pferdegestützte Coaching findet vom Boden aus statt. Das heisst, es wird ni
 - Unser Unterbewusstsein besser kennen lernen
 
 <Gallery>
-![Alt text](/20221013_105234.jpg)
-![Alt text](/IMG_5762.jpg)
-![Alt text](/PXL_20221231_135513544.MP.jpg)
-![Alt text](/PXL_20221231_135633716.jpg)
-![Alt text](/PXL_20221231_135731446.MP.jpg)
-![Alt text](/PXL_20221231_135927111.jpg)
-![Alt text](/PXL_20221231_140121518.jpg)
-![Alt text](/PXL_20221231_140624249.jpg)
-![Alt text](/PXL_20221231_140650354.MP.jpg)
-![Alt text](/PXL_20221231_140311265.jpg)
+![Rosmarie und Latifa](/20221013_105234.jpg)
+![Coaching-Session](/IMG_5762.jpg)
+![Coaching Gespräch](/PXL_20221231_135513544.MP.jpg)
+![Coaching beim gehen](/PXL_20221231_135633716.jpg)
+![Coaching Situation](/PXL_20221231_135731446.MP.jpg)
+![Coaching Situation](/PXL_20221231_135927111.jpg)
+![Duana und Pylone](/PXL_20221231_140121518.jpg)
+![Coaching Situation](/PXL_20221231_140624249.jpg)
+![Coaching Situation](/PXL_20221231_140650354.MP.jpg)
+![Coaching Situation](/PXL_20221231_140311265.jpg)
+![Rosmarie und Latifa](/20230410_192502.jpg)
+![Rosmarie und Latifa](/IMG_5773_bearbeitet.jpg)
+![Rosmarie und Latifa](/IMG_5779_bearbeitet.jpg)
 </Gallery>
 
 ## Wer wir sind
@@ -101,6 +104,18 @@ und ich bin der Co-Co-Coach und behalte immer den Überblick.
 CHF 80.- / 60 Minuten
 Die Dauer eines Coachings variiert zwischen 90 bis 120 Minuten.
 
+<ImgText>
+
+![Pferd und Mensch gehen im Gleichschritt](/IMG_5747.jpg#size=95vw)
+
+<figcaption>
+
+Auch der längste Weg beginnt mit dem ersten Schritt.
+
+</figcaption>
+
+</ImgText>
+
 ## Kontakt
 
 <address>
@@ -113,15 +128,3 @@ E-Mail: [rosmarie@molano.ch](mailto:rosmarie@molano.ch)
 </address>
 
 <Mapbox location={[7.756737443355724, 47.18519492606521]} adress="Dorfstrasse 5, 3368 Bleienbach" link="https://goo.gl/maps/2gJ85unQD5FNrMCz7"/>
-
-<ImgText>
-
-![Pferd und Mensch gehen im Gleichschritt](/IMG_5747.jpg#size=95vw)
-
-<figcaption>
-
-Auch der längste Weg beginnt mit dem ersten Schritt.
-
-</figcaption>
-
-</ImgText>
