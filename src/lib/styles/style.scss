@@ -69,6 +69,10 @@ h1,
 h2,
 h3 {
 	font-family: 'Comfortaa', cursive;
+	a {
+		color: var(--title-color);
+		text-decoration: none;
+	}
 }
 
 img {

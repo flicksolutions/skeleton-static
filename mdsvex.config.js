@@ -102,10 +102,8 @@ const config = defineConfig({
 
 	remarkPlugins: [abbr, headings, addImgAsProps, unwrap],
 	rehypePlugins: [
-		slug[
-			//autolinkImages
-			(autolink, { behavior: 'wrap' })
-		]
+		slug,
+		[autolink, { behavior: 'wrap' }]
 		//removePTagsFromImages
 	]
 });
