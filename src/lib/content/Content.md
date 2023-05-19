@@ -26,6 +26,16 @@ Beim pferdegestützten Coaching liegt der Schwerpunkt wie bei jedem anderen Coac
 Ziel ist immer, den Coachee auf seinem Weg zur Selbstreflexion und im Finden von für ihn passenden Lösungen zu unterstützen.
 Das pferdegestützte Coaching findet vom Boden aus statt. Das heisst, es wird nicht geritten, sondern alle Übungen werden mit dem Pferd an der Hand absolviert.
 
+## Bei welchen Themen ist ein pferdegestütztes Coaching hilfreich?
+
+- Klarheit schaffen
+- Selbstvertrauen aufbauen
+- Achtsamkeit uns selbst wie auch anderen gegenüber fördern
+- Kommunikation verbessern
+- Entscheidungsfindung in schwierigen Lebensphasen unterstützen
+- Grenzen setzen
+- Unser Unterbewusstsein besser kennen lernen
+
 <Gallery>
 ![Alt text](/20221013_105234.jpg)
 ![Alt text](/IMG_5762.jpg)
@@ -39,19 +49,6 @@ Das pferdegestützte Coaching findet vom Boden aus statt. Das heisst, es wird ni
 ![Alt text](/PXL_20221231_140311265.jpg)
 </Gallery>
 
-## Bei welchen Themen ist ein pferdegestütztes Coaching hilfreich?
-
-- Klarheit schaffen
-- Selbstvertrauen aufbauen
-- Achtsamkeit uns selbst wie auch anderen gegenüber fördern
-- Kommunikation verbessern
-- Entscheidungsfindung in schwierigen Lebensphasen unterstützen
-- Grenzen setzen
-- Unser Unterbewusstsein besser kennen lernen
-
-Preise: CHF 80.- / 60 Minuten
-Die Dauer eines Coachings variiert zwischen 90 bis 120 Minuten.
-
 ## Wer wir sind
 
 <Columns>
@@ -62,7 +59,7 @@ Die Dauer eines Coachings variiert zwischen 90 bis 120 Minuten.
 
 ![Rosmarie Locher](/_20200404_155109.jpg#size=45vw)
 
-Seit mehr als 30 Jahren arbeite ich mit Menschen zusammen. Zuerst in meinem angestammten Beruf als Pflegefachfrau und nun schon seit vielen Jahren in meiner Praxis als Med. Masseurin.
+Seit mehr als 30 Jahren arbeite ich mit Menschen zusammen. Zuerst in meinem angestammten Beruf als Pflegefachfrau und nun schon seit vielen Jahren in [meiner Praxis](https://www.gesundheits-praxis-locher.ch/) als Med. Masseurin.
 Immer wieder stiess ich auf Grenzen und dachte: da möchte ich mehr tun, diesem Menschen möchte ich gerne noch andere Möglichkeiten zur Selbsthilfe anbieten.
 Und immer hatte ich dabei Pferde im Kopf.
 Mit der Ausbildung zum INTEGRALHORSE® Familiencoach konnte ich diesen Wunsch nun endlich umsetzten.
@@ -99,7 +96,21 @@ und ich bin der Co-Co-Coach und behalte immer den Überblick.
 
 </Columns>
 
+## Preise
+
+CHF 80.- / 60 Minuten
+Die Dauer eines Coachings variiert zwischen 90 bis 120 Minuten.
+
 ## Kontakt
+
+<address>
+Rosmarie Locher<br>
+Dorfstrasse 5<br>
+3368 Bleienbach<br>
+
+E-Mail: [rosmarie@molano.ch](mailto:rosmarie@molano.ch)
+
+</address>
 
 <Mapbox location={[7.756737443355724, 47.18519492606521]} adress="Dorfstrasse 5, 3368 Bleienbach" link="https://goo.gl/maps/2gJ85unQD5FNrMCz7"/>
 
