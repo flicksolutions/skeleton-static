@@ -92,7 +92,7 @@ Ich liebe es, mit meiner Schnauze alles ganz genau zu untersuchen und nichts ist
 
 ### Ada
 
-![Ada](/ada.jpg#size=45vw)
+![Ada](/ada_new.jpg#size=45vw)
 und ich bin der Co-Co-Coach und behalte immer den Überblick.
 
 </div>
