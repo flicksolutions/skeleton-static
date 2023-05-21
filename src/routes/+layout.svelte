@@ -14,6 +14,11 @@
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
+<svelte:head>
+	<title>{title}</title>
+	<meta name="robots" content="index, follow" />
+	<html lang="de" />
+</svelte:head>
 
 <Head {title} menuData={menuContent} {br} />
 <main>
