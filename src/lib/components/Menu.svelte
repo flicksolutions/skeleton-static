@@ -26,25 +26,21 @@
 	}, 300);
 </script>
 
-{#if br === 'sm'}
-	<Burger {open} on:menuClick />
-{/if}
-{#if defer || br !== 'sm'}
-	<ul class:open>
-		{#each menuItems as section}
-			<li>
-				<a href="#{section.href}" on:click={() => dispatch('menuClick')}>{section.title}</a>
-			</li>
-		{/each}
-	</ul>
-{/if}
+<Burger {open} on:menuClick />
+<ul class:open>
+	{#each menuItems as section}
+		<li>
+			<a href="#{section.href}" on:click={() => dispatch('menuClick')}>{section.title}</a>
+		</li>
+	{/each}
+</ul>
 
 <style lang="scss">
 	@use 'sass:map';
 	@import 'src/lib/styles/variables.scss';
 	ul {
+		display: none;
 		grid-column: 1/-1;
-		display: flex;
 		flex-flow: column nowrap;
 		list-style-type: none;
 		margin: 0 calc(-1 * var(--global-padding));
@@ -53,6 +49,7 @@
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
 		&.open {
+			display: flex;
 			margin-bottom: calc(-1 * var(--global-padding));
 			opacity: 1;
 		}
@@ -76,6 +73,7 @@
 		}
 
 		ul {
+			display: flex;
 			border-top: solid 2px var(--shadow-color);
 			height: 100%;
 			opacity: 1;

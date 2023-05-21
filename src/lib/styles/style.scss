@@ -31,7 +31,7 @@ html {
 	--header-height: 8rem;
 	--menu-height: 2rem;
 	--small-header-padding: 0.8rem;
-	scroll-padding-block: 10rem;
+	scroll-padding-block: calc(var(--header-height) + var(--padding-md) + var(--menu-height) + 2rem);
 	overflow: auto;
 }
 

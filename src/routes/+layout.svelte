@@ -14,13 +14,12 @@
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
-{#if br}
-	<Head {title} menuData={menuContent} {br} />
-	<main>
-		<slot />
-	</main>
-	<Foot {logos} content={footerContent} {br} />
-{/if}
+
+<Head {title} menuData={menuContent} {br} />
+<main>
+	<slot />
+</main>
+<Foot {logos} content={footerContent} {br} />
 
 <style lang="scss">
 	main {

@@ -28,6 +28,8 @@
 </button>
 
 <style lang="scss">
+	@use 'sass:map';
+	@import 'src/lib/styles/variables.scss';
 	button {
 		background: none;
 		border: none;
@@ -39,6 +41,9 @@
 		place-items: center;
 		justify-self: end;
 		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		@media (min-width: map.get($breakpoints, 'md')) {
+			display: none;
+		}
 	}
 	path {
 		stroke-width: 10;
