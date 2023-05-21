@@ -2,10 +2,17 @@
 	import logo from '$lib/assets/logo.svg';
 	import Menu from '$lib/components/Menu.svelte';
 	import { onMount } from 'svelte';
+	import { tweened } from 'svelte/motion';
+	import { cubicInOut } from 'svelte/easing';
 
 	export let title;
 	export let menuData;
 	export let br;
+
+	const headerHeight = tweened(8, {
+		duration: 300,
+		easing: cubicInOut
+	});
 
 	let major, minor;
 
@@ -29,6 +36,8 @@
 	onMount(() => {
 		oldscroll = scrollY;
 	});
+
+	$: $headerHeight = small ? 2.5 : 8; // values are between --small-header-height and --header-height
 </script>
 
 <svelte:window
@@ -54,7 +63,7 @@
 	}}
 />
 
-<header class:small class:open>
+<header class:small class:open style="--header-height: {$headerHeight}rem">
 	<img src={logo} alt="Logo" />
 	<h1>
 		{#if br != 'sm'}
@@ -82,8 +91,7 @@
 		top: 0;
 		z-index: 100;
 		box-shadow: 0 0 10px var(--shadow-color);
-		height: 8rem;
-		transition: height 0.3s ease-in-out;
+		height: var(--header-height);
 
 		h1 {
 			font-size: 1.5rem;
@@ -107,11 +115,9 @@
 		}
 
 		&.small {
-			height: var(--small-header-height);
-			grid-template-rows: var(--small-header-height);
 			&.open {
 				height: 21rem;
-				grid-template-rows: var(--small-header-height) 18rem;
+				grid-template-rows: var(--header-height) 18rem;
 			}
 		}
 	}
@@ -121,12 +127,12 @@
 			grid-template-rows: var(--header-height) calc(var(--padding-md) + var(--menu-height));
 			height: calc(var(--header-height) + var(--padding-md) + var(--menu-height));
 			&.small {
-				height: calc(var(--small-header-height) + var(--small-header-padding) + var(--menu-height));
-				grid-template-rows: var(--small-header-height) calc(
+				height: calc(var(--header-height) + var(--small-header-padding) + var(--menu-height));
+				grid-template-rows: var(--header-height) calc(
 						var(--small-header-padding) + var(--menu-height)
 					);
 				img {
-					width: var(--small-header-height);
+					width: var(--header-height);
 				}
 			}
 		}

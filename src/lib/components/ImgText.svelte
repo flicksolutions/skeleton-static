@@ -79,9 +79,9 @@
 			width: 100%;
 			height: auto;
 			object-fit: cover;
-			max-height: 30vw;
+			height: 30vw;
 			@media (min-width: map.get($breakpoints, 'lg')) {
-				max-height: 45vh;
+				height: 45vh;
 			}
 		}
 
