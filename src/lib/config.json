@@ -41,11 +41,15 @@
 			"logos": [
 				{
 					"src": "/SVPC-Mitgliedsbutton.png",
-					"alt": "Mitglied SVPC"
+					"alt": "Mitglied SVPC",
+					"width": 829,
+					"height": 829
 				},
 				{
 					"src": "/Zertifizierungsbutton_integtralhorse.png",
-					"alt": "Zertifiert Integral Horse"
+					"alt": "Zertifiert Integral Horse",
+					"width": 183,
+					"height": 170
 				}
 			],
 			"content": "<a href=\"#Kontakt\">Kontakt</a>"

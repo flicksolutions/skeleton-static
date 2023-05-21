@@ -11,7 +11,12 @@
 		<div class="info">{@html content[br]}</div>
 		<div class="logos">
 			{#each logos[br] as logo}
-				<img src={createWsrvSrc(logo.src)} alt={logo.alt} />
+				<img
+					src={createWsrvSrc(logo.src, { w: 50, h: 50 })}
+					alt={logo.alt}
+					width="{logo.width}px"
+					height="{logo.height}px"
+				/>
 			{/each}
 		</div>
 	{/if}
@@ -59,6 +64,7 @@
 		img {
 			float: right;
 			height: 100%;
+			width: auto;
 			min-height: 0;
 			&:not(:first-child) {
 				margin-right: 0.8rem;
