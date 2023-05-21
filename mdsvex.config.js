@@ -27,6 +27,24 @@ function headings() {
 	};
 }
 
+function imgs() {
+	let visit;
+	return async function transformer(tree, vFile) {
+		if (!visit) {
+			visit = (await import('unist-util-visit')).visit;
+		}
+
+		vFile.data.imgs = [];
+
+		visit(tree, 'image', (node) => {
+			vFile.data.imgs.push(node.url);
+		});
+
+		if (!vFile.data.fm) vFile.data.fm = {};
+		vFile.data.fm.imgs = vFile.data.imgs;
+	};
+}
+
 // Writes the image paths of all images between the opening and closing tags of a Gallery component as props to that component.
 function addImgAsProps() {
 	let visit;
@@ -100,7 +118,7 @@ const config = defineConfig({
 		dashes: 'oldschool'
 	},
 
-	remarkPlugins: [abbr, headings, addImgAsProps, unwrap],
+	remarkPlugins: [abbr, headings, imgs, addImgAsProps, unwrap],
 	rehypePlugins: [
 		slug,
 		[autolink, { behavior: 'wrap' }]

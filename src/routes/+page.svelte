@@ -3,8 +3,16 @@
 	import Content from '$lib/content/Content.md';
 	import { onMount } from 'svelte';
 	import { createWsrvSrc } from '$lib/functions';
+	import { setContext } from 'svelte';
 
 	let bp;
+
+	export let data;
+
+	let { dimensions } = data;
+	Object.keys(dimensions).forEach((key) => {
+		setContext(key, dimensions[key]);
+	});
 
 	onMount(() => {
 		bp = BiggerPicture({

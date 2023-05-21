@@ -1,11 +1,15 @@
 <script>
 	import { createWsrvSrcSet } from '$lib/functions.js';
 	import config from '$lib/config.json';
+	import { getContext } from 'svelte';
 
 	export let src;
 	export let alt;
-	let params = {};
 
+	const dimensions = getContext(src);
+	const { width, height } = dimensions;
+
+	let params = {};
 	if (src.includes('#')) params = createOptionObject(src);
 
 	if (params.hasOwnProperty('wsrv')) {
@@ -49,5 +53,7 @@
 		{src}
 		{alt}
 		loading="lazy"
+		width="{width}px"
+		height="{height}px"
 	/>
 </a>

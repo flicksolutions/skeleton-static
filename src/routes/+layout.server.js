@@ -2,6 +2,7 @@ export const prerender = true;
 import GithubSlugger from 'github-slugger';
 import { header, footer } from '$lib/config.json';
 import { getAttrByBreakpoint } from '$lib/functions.js';
+import imageSize from 'image-size';
 
 const slugger = new GithubSlugger();
 
@@ -25,10 +26,17 @@ export async function load() {
 			{ title: '', sections: [] }
 		);
 	}
+	const dimensions = {};
+	Content.metadata.imgs.forEach((img) => {
+		const { width, height } = imageSize(`./static/${img.split('#')[0]}`); // Image path
+		dimensions[img] = { width, height };
+	});
+
 	return {
 		logos,
 		footerContent,
 		menuContent,
-		title
+		title,
+		dimensions
 	};
 }

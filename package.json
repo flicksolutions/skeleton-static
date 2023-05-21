@@ -16,6 +16,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"github-slugger": "^2.0.0",
+		"image-size": "^1.0.2",
 		"mdsvex": "^0.10.6",
 		"prettier": "^2.8.8",
 		"prettier-plugin-svelte": "^2.10.0",
