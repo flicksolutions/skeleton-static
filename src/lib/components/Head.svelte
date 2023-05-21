@@ -42,14 +42,14 @@
 
 <svelte:window
 	bind:scrollY
-	on:wheel={(e) => {
+	on:wheel|passive={(e) => {
 		if (e.deltaY > 15 && !small) {
 			small = true;
 		} else if (e.deltaY < -15 && small) {
 			small = false;
 		}
 	}}
-	on:touchmove={() => {
+	on:touchmove|passive={() => {
 		const deltaY = scrollY - oldscroll;
 		console.log(deltaY);
 		if (deltaY > 15 && !small) {
@@ -58,7 +58,7 @@
 			small = false;
 		}
 	}}
-	on:touchstart={() => {
+	on:touchstart|passive={() => {
 		oldscroll = scrollY;
 	}}
 />
