@@ -64,15 +64,17 @@
 />
 
 <header class:small class:open style="--header-height: {$headerHeight}rem">
-	<img src={logo} alt="Logo" />
+	<a href="/" class="headerlink"><img src={logo} alt="Logo" /></a>
 	<h1>
-		{#if br != 'sm'}
-			{title}
-		{:else if !small}
-			{major} {minor}
-		{:else}
-			{major}
-		{/if}
+		<a href="/">
+			{#if br != 'sm'}
+				{title}
+			{:else if !small}
+				{major} {minor}
+			{:else}
+				{major}
+			{/if}
+		</a>
 	</h1>
 	<Menu data={menuData} {br} {open} on:menuClick={handleMenuClick} />
 </header>
@@ -100,10 +102,14 @@
 			color: var(--title-color);
 			grid-row: 1;
 		}
-		img {
+		.headerlink {
 			justify-self: start;
-			max-height: 100%;
+			height: 100%;
 			grid-row: 1;
+			img {
+				height: 100%;
+				width: auto;
+			}
 		}
 		&.open {
 			height: 26rem;
@@ -131,13 +137,13 @@
 				grid-template-rows: var(--header-height) calc(
 						var(--small-header-padding) + var(--menu-height)
 					);
-				img {
+				.headerlink {
 					width: var(--header-height);
 				}
 			}
 		}
 
-		img {
+		.headerlink {
 			height: 100%;
 			width: var(--header-height);
 		}
