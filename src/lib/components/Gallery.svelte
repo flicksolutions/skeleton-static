@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
 	import { createWsrvSrc } from '$lib/functions';
 	import BiggerPicture from 'bigger-picture/svelte';
 
@@ -9,24 +8,13 @@
 	export let srcs = [];
 	export let alts = [];
 
-	/*function openGallery(e) {
-        bp.open({
-            items: srcs.map(src => ({
-                img: createWsrvSrcSet(src),
-                alt: alts[srcs.indexOf(src)],
-            })),
-            el: e.target,
-        });
-    }*/
-
 	onMount(() => {
 		bp = BiggerPicture({
 			target: carouselContainer
 		});
 		const items = srcs.map((src) => ({
-			thumb: createWsrvSrc(src, { h: 300, w: 534, fit: 'contain' }),
+			thumb: createWsrvSrc(src, { h: 300, w: 534, fit: 'contain' }), // since we theoretically have the image dimensions, we can create better thumbnails...
 			img: createWsrvSrc(src, { h: 1080, w: 1920, fit: 'contain' }),
-			//img: createWsrvSrcSet(src),
 			alt: alts[srcs.indexOf(src)],
 			w: 1920,
 			h: 1080
@@ -38,10 +26,6 @@
 			intro: 'fadeup',
 			noClose: true,
 			onImageClick(inlineContainer, inlineActiveItem) {
-				/*if (!(inlineContainer.clientWidth < 800)) {
-                    console.log("not small");
-                return;
-                }*/
 				const bpImg = inlineContainer.querySelector('.bp-img');
 				BiggerPicture({ target: document.body }).open({
 					items: items.map((item) => ({
@@ -66,19 +50,7 @@
 	});
 </script>
 
-{#if browser}
-	<div class="carousel-container" bind:this={carouselContainer}>
-		<!--{#each srcs as src, i}
-
-        <a
-            href={createWsrvSrc(src)}
-            on:click|preventDefault={(e) => openGallery(e)}
-        >
-            <img src={createWsrvSrc(src,{w: 300})} srcset={createWsrvSrcSet(src)} sizes="{`(min-width:${breakpoints.md}) 30vw, 100vw`}" alt="{alts[i]}" />
-        </a>
-        {/each}-->
-	</div>
-{/if}
+<div class="carousel-container" bind:this={carouselContainer} />
 
 <style lang="scss">
 	@use 'sass:map';
