@@ -5,6 +5,7 @@
 
 	import 'bigger-picture/css';
 	import '$lib/styles/style.scss';
+	import { PUBLIC_DEVMODE } from '$env/static/public';
 	import Head from '$lib/components/Head.svelte';
 	import Foot from '$lib/components/Foot.svelte';
 	import { setBr } from '$lib/functions.js';
@@ -16,7 +17,7 @@
 <svelte:window bind:innerWidth={windowWidth} />
 <svelte:head>
 	<title>{title}</title>
-	<meta name="robots" content="index, follow" />
+	<meta name="robots" content={PUBLIC_DEVMODE ? 'noindex, nofollow' : 'index, follow'} />
 	<html lang="de" />
 </svelte:head>
 

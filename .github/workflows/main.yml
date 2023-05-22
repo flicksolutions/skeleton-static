@@ -4,9 +4,10 @@ on:
     branches:
       - main
       - master
-      
+
 env:
   PUBLIC_MAPTILER_TOKEN: ${{ vars.PUBLIC_MAPTILER_TOKEN }}
+  PUBLIC_DEVMODE: true
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
