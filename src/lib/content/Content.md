@@ -17,8 +17,9 @@
 
 ## Was ist pferdegestütztes Coaching?
 
-Pferde sind Meister in der nonverbalen Kommunikation und können uns Menschen dadurch helfen, uns selber besser kennen und verstehen zu lernen. Ihre Fähigkeit, in Sekundenschnelle auf ihre Umgebung reagieren zu können, sichert seit jeher ihr Überleben und das Zusammenleben in der Herde. Gerade durch diese Fähigkeit sind sie hervorragende Beobachter und «lesen» uns wie ein offenes Buch. Sie spiegeln unsere Gefühle, zeigen uns schonungslos auf, wie es gerade um uns steht… Ob wir wollen oder nicht. Sie leben im Hier und Jetzt, sind absolut ehrlich, unbestechlich, bewerten uns nicht und sind immer wieder bereit, sich auf uns einzulassen.
-Pferde bieten uns eine wundervolle Möglichkeit etwas über uns selbst zu lernen.
+Pferde sind Meister in der nonverbalen Kommunikation und können uns Menschen dadurch helfen, uns selber besser kennen und verstehen zu lernen. Ihre Fähigkeit, in Sekundenschnelle auf ihre Umgebung reagieren zu können, sichert seit jeher ihr Überleben und das Zusammenleben in der Herde. Gerade durch diese Fähigkeit sind sie hervorragende Beobachter und «lesen» uns wie ein offenes Buch. Sie spiegeln unsere Gefühle, zeigen uns schonungslos auf, wie es gerade um uns steht … ob wir wollen oder nicht. Sie leben im Hier und Jetzt, sind absolut ehrlich, unbestechlich, bewerten uns nicht und sind immer wieder bereit, sich auf uns einzulassen.
+
+Pferde bieten uns eine wundervolle Möglichkeit, etwas über uns selbst zu lernen.
 
 ## Und wie geht das nun konkret?
 
@@ -34,13 +35,13 @@ Das pferdegestützte Coaching findet vom Boden aus statt. Das heisst, es wird ni
 - Kommunikation verbessern
 - Entscheidungsfindung in schwierigen Lebensphasen unterstützen
 - Grenzen setzen
-- Unser Unterbewusstsein besser kennen lernen
+- Unser Unterbewusstsein besser kennenlernen
 
 <Gallery>
 ![Rosmarie und Latifa](/20221013_105234.jpg)
 ![Coaching-Session](/IMG_5762.jpg)
 ![Coaching Gespräch](/PXL_20221231_135513544.MP.jpg)
-![Coaching beim gehen](/PXL_20221231_135633716.jpg)
+![Coaching beim Gehen](/PXL_20221231_135633716.jpg)
 ![Coaching Situation](/PXL_20221231_135731446.MP.jpg)
 ![Coaching Situation](/PXL_20221231_135927111.jpg)
 ![Duana und Pylone](/PXL_20221231_140121518.jpg)
@@ -62,10 +63,10 @@ Das pferdegestützte Coaching findet vom Boden aus statt. Das heisst, es wird ni
 
 ![Rosmarie Locher](/_20200404_155109.jpg#size=45vw)
 
-Seit mehr als 30 Jahren arbeite ich mit Menschen zusammen. Zuerst in meinem angestammten Beruf als Pflegefachfrau und nun schon seit vielen Jahren in [meiner Praxis](https://www.gesundheits-praxis-locher.ch/) als Med. Masseurin.
+Seit mehr als 30 Jahren arbeite ich mit Menschen zusammen. Zuerst in meinem angestammten Beruf als Pflegefachfrau und jetzt schon seit vielen Jahren in [meiner Praxis](https://www.gesundheits-praxis-locher.ch/) als Med. Masseurin.
 Immer wieder stiess ich auf Grenzen und dachte: da möchte ich mehr tun, diesem Menschen möchte ich gerne noch andere Möglichkeiten zur Selbsthilfe anbieten.
 Und immer hatte ich dabei Pferde im Kopf.
-Mit der Ausbildung zum INTEGRALHORSE® Familiencoach konnte ich diesen Wunsch nun endlich umsetzten.
+Mit der Ausbildung zum INTEGRALHORSE® Familiencoach konnte ich diesen Wunsch nun endlich umsetzen.
 
 </div>
 <div class="hero">
@@ -102,7 +103,7 @@ und ich bin der Co-Co-Coach und behalte immer den Überblick.
 ## Preise
 
 CHF 80.- / 60 Minuten
-Die Dauer eines Coachings variiert zwischen 90 bis 120 Minuten.
+Die Dauer eines Coachings variiert zwischen 90 und 120 Minuten.
 
 <ImgText>
 
