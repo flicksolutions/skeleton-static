@@ -17,7 +17,7 @@
 <svelte:window bind:innerWidth={windowWidth} />
 <svelte:head>
 	<title>{title}</title>
-	<meta name="robots" content={PUBLIC_DEVMODE ? 'noindex, nofollow' : 'index, follow'} />
+	<meta name="robots" content={PUBLIC_DEVMODE === 'true' ? 'noindex, nofollow' : 'index, follow'} />
 	<html lang="de" />
 </svelte:head>
 
