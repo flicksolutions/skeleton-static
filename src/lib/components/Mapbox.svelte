@@ -1,40 +1,52 @@
 <script>
 	import { onMount } from 'svelte';
-	import { breakpoints } from '$lib/config.json';
 	import { PUBLIC_MAPTILER_TOKEN } from '$env/static/public';
-
-	import { Map } from '@onsvisual/svelte-maps'; // for interface see https://github.com/ONSvisual/svelte-maps/blob/main/src/Map.svelte
 	import maplibre from 'maplibre-gl';
 	import { Marker, Popup } from 'maplibre-gl';
 
 	export let location;
-	export let adress = '',
-		link = '';
+	export let adress = '';
+	export let link = '';
 
-	let map;
+	let map, mapobject;
 
 	onMount(() => {
-		map.addControl(new maplibre.NavigationControl(), 'top-left');
-		map.scrollZoom.disable();
+		mapobject = new maplibre.Map({
+			container: 'map',
+			style: `https://api.maptiler.com/maps/ch-swisstopo-lbm-vivid/style.json?key=${PUBLIC_MAPTILER_TOKEN}`,
+			center: location,
+			zoom: 14,
+			maxZoom: 21,
+			minZoom: 8,
+			scrollZoom: false,
+			dragRotate: false,
+			touchZoomRotate: false,
+			doubleClickZoom: true,
+			pitchWithRotate: false,
+			dragPan: false,
+			preserveDrawingBuffer: true,
+			attributionControl: false
+		});
+		mapobject.addControl(new maplibre.NavigationControl(), 'top-left');
 		const popup = new Popup({ offset: 25 })
 			.setLngLat(location)
 			.setHTML(
 				`<h3>${adress}</h3><p><a href="${link}" target="_blank" rel="noopener noreferrer">Wegbeschreibung (Google Maps)</a></p>`
 			);
 
-		new Marker({ color: 'var(--title-color)' }).setLngLat(location).setPopup(popup).addTo(map);
+		new Marker({ color: 'var(--title-color)' }).setLngLat(location).setPopup(popup).addTo(mapobject);
 	});
 </script>
 
-<div class="mapcontainer">
-	<Map
-		id="map"
-		style="https://api.maptiler.com/maps/ch-swisstopo-lbm-vivid/style.json?key={PUBLIC_MAPTILER_TOKEN}"
-		location={{ lng: location[0], lat: location[1], zoom: 14 }}
-		maxzoom={21}
-		minzoom={8}
-		bind:map
+<svelte:head>
+	<link
+		rel="stylesheet"
+		href="https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.css"
 	/>
+</svelte:head>
+
+<div class="mapcontainer">
+	<div id="map" />
 </div>
 
 <style lang="scss">
@@ -45,5 +57,10 @@
 		height: 50vh;
 		width: 100vw;
 		margin-left: calc(-1 * var(--global-padding));
+	}
+
+	#map {
+		height: 100%;
+		width: 100%;
 	}
 </style>
