@@ -18,7 +18,6 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="robots" content={PUBLIC_DEVMODE === 'true' ? 'noindex, nofollow' : 'index, follow'} />
-	<html lang="de" />
 </svelte:head>
 
 <Head {title} menuData={menuContent} {br} />
