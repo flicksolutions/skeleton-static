@@ -8,7 +8,7 @@
 	export let adress = '';
 	export let link = '';
 
-	let map, mapobject;
+	let mapobject;
 
 	onMount(() => {
 		mapobject = new maplibre.Map({
