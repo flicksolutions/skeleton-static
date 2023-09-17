@@ -18,14 +18,7 @@
 			zoom: 14,
 			maxZoom: 21,
 			minZoom: 8,
-			scrollZoom: false,
-			dragRotate: false,
-			touchZoomRotate: false,
-			doubleClickZoom: true,
-			pitchWithRotate: false,
-			dragPan: false,
-			preserveDrawingBuffer: true,
-			attributionControl: false
+			scrollZoom: false
 		});
 		mapobject.addControl(new maplibre.NavigationControl(), 'top-left');
 		const popup = new Popup({ offset: 25 })
@@ -34,15 +27,15 @@
 				`<h3>${adress}</h3><p><a href="${link}" target="_blank" rel="noopener noreferrer">Wegbeschreibung (Google Maps)</a></p>`
 			);
 
-		new Marker({ color: 'var(--title-color)' }).setLngLat(location).setPopup(popup).addTo(mapobject);
+		new Marker({ color: 'var(--title-color)' })
+			.setLngLat(location)
+			.setPopup(popup)
+			.addTo(mapobject);
 	});
 </script>
 
 <svelte:head>
-	<link
-		rel="stylesheet"
-		href="https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.css"
-	/>
+	<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.css" />
 </svelte:head>
 
 <div class="mapcontainer">
