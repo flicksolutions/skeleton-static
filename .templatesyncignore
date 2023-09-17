@@ -1,3 +1,5 @@
 .github/workflows/
 src/lib/config.json
 src/lib/content/
+/static/
+/src/lib/assets/
