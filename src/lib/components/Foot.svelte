@@ -9,16 +9,18 @@
 <footer>
 	{#if br}
 		<div class="info">{@html content[br]}</div>
-		<div class="logos">
-			{#each logos[br] as logo}
-				<img
-					src={createWsrvSrc(logo.src, { w: 50, h: 50 })}
-					alt={logo.alt}
-					width="{logo.width}px"
-					height="{logo.height}px"
-				/>
-			{/each}
-		</div>
+		{#if logos[br]}
+			<div class="logos">
+				{#each logos[br] as logo}
+					<img
+						src={createWsrvSrc(logo.src, { w: 50, h: 50 })}
+						alt={logo.alt}
+						width="{logo.width}px"
+						height="{logo.height}px"
+					/>
+				{/each}
+			</div>
+		{/if}
 	{/if}
 </footer>
 
