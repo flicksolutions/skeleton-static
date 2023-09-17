@@ -1,9 +1,10 @@
 name: deploy
 on:
-  push:
-    branches:
-      - main
-      - master
+  #push:
+    #branches:
+      #- main
+      #- master
+  workflow_dispatch:
 
 env:
   PUBLIC_MAPTILER_TOKEN: ${{ vars.PUBLIC_MAPTILER_TOKEN }}

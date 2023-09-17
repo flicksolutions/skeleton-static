@@ -9,7 +9,8 @@
 3. Set the Variables:
    This is just the PUBLIC_MAPTILER_TOKEN - found here: https://cloud.maptiler.com/account/keys/
 4. To enable syncing with the template change the Workflow permissions here: https://github.com/<gh-user>/<repo>/settings/actions
-5. Go live in setting the ENV-Variable PUBLIC_DEVMODE to false in this file: /.github/workflows/main.yml
+5. Go live in setting the ENV-Variable PUBLIC_DEVMODE to false in this file: /.github/workflows/main.yml (That's for search-engines)
+6. Enable the Push on the cyon-server on git-push by changing the main-workflow.
 
 ## Developing
 
