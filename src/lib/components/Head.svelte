@@ -85,6 +85,7 @@
 	header {
 		display: grid;
 		grid-template-columns: 1fr 2fr auto;
+		grid-column-gap: var(--padding-sm);
 		grid-template-rows: var(--header-height);
 		align-items: center;
 		padding: 0.8rem var(--global-padding);
@@ -129,7 +130,8 @@
 	}
 	@media (min-width: map.get($breakpoints, 'md')) {
 		header {
-			grid-template-columns: auto 3fr;
+			grid-template-columns: minmax(var(--header-height), 1fr) 3fr;
+			grid-column-gap: var(--padding-md);
 			grid-template-rows: var(--header-height) calc(var(--padding-md) + var(--menu-height));
 			height: calc(var(--header-height) + var(--padding-md) + var(--menu-height));
 			&.small {
