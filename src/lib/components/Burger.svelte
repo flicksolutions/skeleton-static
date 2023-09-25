@@ -40,6 +40,7 @@
 		display: grid;
 		place-items: center;
 		justify-self: end;
+		fill: var(--text-color);
 		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 		@media (min-width: map.get($breakpoints, 'md')) {
 			display: none;
